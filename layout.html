@@ -169,7 +169,25 @@
                             <div class="col bordered-container text-horizontal-align-center doc-demo-div doc-fixed">1 of 2 columns</div>
                         </div>
                         <pre class="doc-demo-code">
-<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row content-vertical-align-top"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row content-vertical-align-center"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row content-vertical-align-bottom"</span> <span class="b">></span>
     <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
         1 of 2 columns
     <span class="b"><<span class="b">/div</span>></span>
@@ -197,7 +215,7 @@
                     <section class="col-5 self-horizontal-align-center doc-demo-container">
                         <div class="doc-demo-display">
                             <nav class="navbar-primary doc-demo-nav">
-                                <a class="navbar-brand" href="index.html">Brand</a>
+                                <a class="navbar-brand" >Brand</a>
                                 <div class="navbar-collapse">
                                     <ul class="navbar-nav">
                                       <li class="nav-item">
@@ -213,7 +231,7 @@
                                 </div>
                             </nav>
                             <nav class="navbar-secondary doc-demo-nav">
-                                <a class="navbar-brand" href="index.html">Brand</a>
+                                <a class="navbar-brand" >Brand</a>
                                 <div class="navbar-collapse">
                                     <ul class="navbar-nav">
                                       <li class="nav-item">
@@ -229,7 +247,7 @@
                                 </div>
                             </nav>
                             <nav class="navbar-light doc-demo-nav">
-                                <a class="navbar-brand" href="index.html">Brand</a>
+                                <a class="navbar-brand" >Brand</a>
                                 <div class="navbar-collapse">
                                     <ul class="navbar-nav">
                                       <li class="nav-item">
@@ -245,7 +263,7 @@
                                 </div>
                             </nav>
                             <nav class="navbar-dark doc-demo-nav">
-                                <a class="navbar-brand" href="index.html">Brand</a>
+                                <a class="navbar-brand" >Brand</a>
                                 <div class="navbar-collapse">
                                     <ul class="navbar-nav">
                                       <li class="nav-item">
@@ -262,14 +280,40 @@
                             </nav>
                         </div>
                         <pre class="doc-demo-code">
-<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
-    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
-        1 of 2 columns
-    <span class="b"><<span class="b">/div</span>></span>
-    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
-        1 of 2 columns
-    <span class="b"><<span class="b">/div</span>></span>
-<span class="b"><<span class="b">/div</span>></span></pre>
+<span class="b"><<span class="b">nav</span> </span><span class="kw">class=</span><span class="n">"navbar-primary"</span><span class="b">></span>
+  <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"navbar-brand"</span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
+    Brand
+  <span class="b"><<span class="b">/a</span>></span>
+  <span class="b"><<span class="b">div</span>></span>
+    <span class="b"><<span class="b">ul</span> </span><span class="kw">class=</span><span class="n">"navbar-nav"</span><span class="b">></span>
+      <span class="b"><<span class="b">li</span> </span><span class="kw">class=</span><span class="n">"nav-item"</span><span class="b">></span>
+        <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"nav-link"</span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
+          Tab 1
+        <span class="b"><<span class="b">/a</span>></span>
+      <span class="b"><<span class="b">/li</span>></span>
+      <span class="b"><<span class="b">li</span> </span><span class="kw">class=</span><span class="n">"nav-item"</span><span class="b">></span>
+        <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"nav-link"</span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
+          Tab 2
+        <span class="b"><<span class="b">/a</span>></span>
+      <span class="b"><<span class="b">/li</span>></span>
+      <span class="b"><<span class="b">li</span> </span><span class="kw">class=</span><span class="n">"nav-item"</span><span class="b">></span>
+        <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"nav-link"</span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
+          Tab 3
+        <span class="b"><<span class="b">/a</span>></span>
+      <span class="b"><<span class="b">/li</span>></span>
+    <span class="b"><<span class="b">/ul</span>></span>
+  <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/nav</span>></span>
+
+<span class="b"><<span class="b">nav</span> </span><span class="kw">class=</span><span class="n">"navbar-secondary</span><span class="b">></span>
+  ...
+<span class="b"><<span class="b">/nav</span>></span>
+<span class="b"><<span class="b">nav</span> </span><span class="kw">class=</span><span class="n">"navbar-light"</span><span class="b">></span>
+  ...
+<span class="b"><<span class="b">/nav</span>></span>
+<span class="b"><<span class="b">nav</span> </span><span class="kw">class=</span><span class="n">"navbar-dark"</span><span class="b">></span>
+  ...
+<span class="b"><<span class="b">/nav</span>></span></pre>
                     </section>
                 </section>
 
