@@ -338,6 +338,7 @@ nav a {
 }
 .side-nav h2, .side-nav h3, .side-nav h4, .side-nav h5, .side-nav h6 {
   padding: 0.2em 0.5em;
+  display: inline-block;
 }
 
 .body-side-nav {
@@ -348,7 +349,7 @@ nav a {
   grid-column: 2;
 }
 
-.side-nav a {
+.side-nav .link {
   text-decoration: none !important;
   color: black !important;
   padding: 0.3em 0.7em;
@@ -357,8 +358,13 @@ nav a {
   -moz-transition: background-color 0.1s ease;
   -ms-transition: background-color 0.1s ease;
 }
-.side-nav a:hover {
+.side-nav .link:hover {
   background-color: #d1caed;
+}
+
+.side-nav .head-link {
+  text-decoration: none !important;
+  color: black !important;
 }
 
 html {

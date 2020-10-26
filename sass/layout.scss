@@ -203,6 +203,7 @@ nav a {
     padding-top:1em;
     h2, h3, h4, h5, h6 {
         padding:0.2em 0.5em;
+        display:inline-block;
     }
 }
 
@@ -215,7 +216,7 @@ nav a {
 }
 
 
-.side-nav a {
+.side-nav .link {
     text-decoration: none!important;
     color:black!important;
     padding:0.3em 0.7em;
@@ -223,4 +224,8 @@ nav a {
     &:hover {
         background-color: darken(colors.$code-bg-color, 10);
     }
+}
+.side-nav .head-link {
+    text-decoration: none!important;
+    color:black!important;
 }
