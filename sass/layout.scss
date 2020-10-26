@@ -1,0 +1,226 @@
+@use 'sass:math';
+@use 'colors';
+@use 'mixins';
+
+//Grid
+
+
+
+.row {
+    display:flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+.content-horizontal-align-left {
+    justify-content: flex-start!important;
+}
+.content-horizontal-align-center {
+    justify-content: center!important;
+}
+.content-horizontal-align-right {
+    justify-content: flex-end!important;
+}
+
+.content-vertical-align-top {
+    align-items: flex-start!important;
+}
+.content-vertical-align-center {
+    align-items: center!important;
+}
+.content-vertical-align-bottom {
+    align-items: flex-end!important;
+}
+
+.self-horizontal-align-center {
+    margin:auto;
+}
+
+.text-horizontal-align-center {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align: center;
+}
+
+.col {
+    flex: 1;
+    max-width: 100%;
+}
+
+.col-1 {
+    flex: 0 0 math.percentage(1/6);
+    max-width: math.percentage(1/6);
+}
+.col-2 {
+    flex: 0 0 math.percentage(1/3);
+    max-width: math.percentage(1/3);
+}
+.col-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-4 {
+    flex: 0 0 math.percentage(2/3);
+    max-width: math.percentage(2/3);
+}
+.col-5 {
+    flex: 0 0 math.percentage(5/6);
+    max-width: math.percentage(5/6);
+}
+.col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+@media all and (max-width:650px) {
+    .row{
+        flex-wrap: wrap;
+    }
+    .col-1 {
+        flex: 0 0 math.percentage(1/3);
+        max-width: math.percentage(1/3);
+    }
+    .col-2 {
+        flex: 0 0 math.percentage(2/3);
+        max-width: math.percentage(2/3);
+    }
+    .col-3, .col-4, .col-5, .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+//Container
+%base-container {
+    color:#000;
+    background-color: #fff;
+    padding:1em 0.5em;
+}
+
+.container {
+    @extend %base-container;
+}
+
+.bordered-container {
+    @extend %base-container;
+    border:2px solid #000;
+    box-sizing: border-box;
+}
+
+
+
+//Code 
+.b {
+    color: colors.$code-bracket-color;
+}
+.n{
+    color: colors.$code-name-color;
+}
+.kw {
+    color: colors.$code-keyword-color;
+}
+
+pre{
+    background-color: colors.$code-bg-color;
+    padding:2em;
+    overflow: scroll;
+}
+pre, code {
+    font-family: "Courier New", Courier, monospace;
+}
+code {
+    background-color: colors.$code-bg-color;
+}
+
+
+//Nav 
+
+nav {
+    position:relative;
+    top:0;
+    z-index: 10;
+    width:100%;
+    padding:0 1em;
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+    background-color: #fff;
+    &.nav-fixed {
+        position: fixed;
+    }
+}
+
+
+.navbar-brand {
+    font-size: 1.3em;
+    margin:0 1em 0 0.5em;
+}
+.navbar-nav {
+    display:flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left:0;
+}
+.nav-item .active {
+    font-weight: bold;
+} 
+.nav-link {
+    display:block;
+    padding:1.2em 0.7em;
+}
+nav a {
+    text-decoration: none;
+    color:inherit!important;
+}
+
+.navbar-primary {
+    background-color: colors.$primary-color;
+    color:#fff;
+}
+
+.navbar-primary .nav-link {
+    @include mixins.transition(background-color 0.2s ease);
+    &:hover {
+        background-color: darken(colors.$primary-color, 5%);
+    }
+}
+
+
+
+
+
+
+
+
+//side-nav
+
+.side-nav{
+    background-color: colors.$code-bg-color;
+    height:100vh;
+    width:12em;
+    position: fixed;
+    z-index: 5;
+    padding-top:1em;
+    h2, h3, h4, h5, h6 {
+        padding:0.2em 0.5em;
+    }
+}
+
+.body-side-nav {
+    display:grid;
+    grid-template-columns: 12em auto;
+    .body-section {
+        grid-column: 2;
+    }
+}
+
+
+.side-nav a {
+    text-decoration: none!important;
+    color:black!important;
+    padding:0.3em 0.7em;
+    @include mixins.transition(background-color 0.1s ease);
+    &:hover {
+        background-color: darken(colors.$code-bg-color, 10);
+    }
+}

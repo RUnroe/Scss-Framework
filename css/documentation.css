@@ -1,0 +1,27 @@
+.doc-demo-container {
+    border:3px solid #f2f0fa;
+}
+.doc-demo-display {
+    padding:2em 1em;
+}
+
+.doc-demo-div {
+    background-color:#f2f0fa;
+    border-color:#9388bd;
+    
+}
+.doc-demo-display.doc-fixed {
+    height:12em;
+    background-color: #d1ffe8;
+    padding:1em;
+}
+.doc-demo-div.doc-fixed {
+    height:3em;
+}
+.doc-demo-multiple {
+    display:flex;
+    flex-direction: column;
+    gap:0.4em;
+}
+
+

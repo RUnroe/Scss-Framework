@@ -1,0 +1,35 @@
+@use 'meyer-reset';
+@use 'colors';
+@use 'buttons';
+@use 'layout';
+@use 'text';
+
+html {
+    scroll-behavior: smooth;
+}
+.body-section {
+    padding:1em 3em;
+    &.nav-fixed {
+        margin-top: 3em;
+    }
+}
+.side-nav {
+    &.nav-fixed {
+        padding-top: 4em;
+    }
+}
+.scroll-margin {
+    scroll-margin-top: 3em;
+}
+
+@media all and (max-width:650px) {
+    .body-section {
+        padding: 1em 0.5em;
+    }
+    .side-nav {
+        display:none;
+    }
+    .body-side-nav {
+        display:block;
+    }
+}

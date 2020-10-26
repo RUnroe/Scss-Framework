@@ -1,0 +1,22 @@
+$primary-color: #7530ff;
+$secondary-color:#ffbd38;
+
+$success-color: #28a745;
+$danger-color: #DA344D; //A31621
+
+$light-color: #eee;
+$dark-color: #252525;
+
+$code-bracket-color:#2f63de;
+$code-keyword-color: #019413;
+$code-name-color: #d93256;
+$code-bg-color: #f2f0fa;
+
+
+.bg-primary {
+    background-color: $primary-color;
+    color:white;
+}
+.bg-secondary {
+    background-color: $secondary-color;
+}

@@ -1,0 +1,466 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.bg-primary {
+  background-color: #7530ff;
+  color: white;
+}
+
+.bg-secondary {
+  background-color: #ffbd38;
+}
+
+.btn {
+  padding: 0.7em 1.8em;
+  border-radius: 7px;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 3px 1.5px #4285F4;
+}
+
+.btn-primary {
+  background-color: #7530ff;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #6417ff;
+}
+.btn-primary:active {
+  background-color: #4c00e3;
+}
+
+.btn-secondary {
+  background-color: #ffbd38;
+  color: #000;
+}
+.btn-secondary:hover {
+  background-color: #ffac05;
+}
+.btn-secondary:active {
+  background-color: #d18c00;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
+.btn-success:hover {
+  background-color: #23923d;
+}
+.btn-success:active {
+  background-color: #1c7631;
+}
+
+.btn-danger {
+  background-color: #DA344D;
+  color: #fff;
+}
+.btn-danger:hover {
+  background-color: #c6243d;
+}
+.btn-danger:active {
+  background-color: #9b1c2f;
+}
+
+.btn-light {
+  background-color: #eee;
+  color: #000;
+}
+.btn-light:hover {
+  background-color: #d5d5d5;
+}
+.btn-light:active {
+  background-color: #c3c3c3;
+}
+
+.btn-dark {
+  background-color: #252525;
+  color: #fff;
+}
+.btn-dark:hover {
+  background-color: #3c3c3c;
+}
+.btn-dark:active {
+  background-color: #4b4b4b;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-horizontal-align-left {
+  justify-content: flex-start !important;
+}
+
+.content-horizontal-align-center {
+  justify-content: center !important;
+}
+
+.content-horizontal-align-right {
+  justify-content: flex-end !important;
+}
+
+.content-vertical-align-top {
+  align-items: flex-start !important;
+}
+
+.content-vertical-align-center {
+  align-items: center !important;
+}
+
+.content-vertical-align-bottom {
+  align-items: flex-end !important;
+}
+
+.self-horizontal-align-center {
+  margin: auto;
+}
+
+.text-horizontal-align-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.col {
+  flex: 1;
+  max-width: 100%;
+}
+
+.col-1 {
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+
+.col-2 {
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+
+.col-3 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-4 {
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%;
+}
+
+.col-5 {
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
+
+.col-6 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media all and (max-width: 650px) {
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .col-1 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+
+  .col-2 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+
+  .col-3, .col-4, .col-5, .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.bordered-container, .container {
+  color: #000;
+  background-color: #fff;
+  padding: 1em 0.5em;
+}
+
+.bordered-container {
+  border: 2px solid #000;
+  box-sizing: border-box;
+}
+
+.b {
+  color: #2f63de;
+}
+
+.n {
+  color: #d93256;
+}
+
+.kw {
+  color: #019413;
+}
+
+pre {
+  background-color: #f2f0fa;
+  padding: 2em;
+  overflow: scroll;
+}
+
+pre, code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+code {
+  background-color: #f2f0fa;
+}
+
+nav {
+  position: relative;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 0 1em;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+nav.nav-fixed {
+  position: fixed;
+}
+
+.navbar-brand {
+  font-size: 1.3em;
+  margin: 0 1em 0 0.5em;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-left: 0;
+}
+
+.nav-item .active {
+  font-weight: bold;
+}
+
+.nav-link {
+  display: block;
+  padding: 1.2em 0.7em;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit !important;
+}
+
+.navbar-primary {
+  background-color: #7530ff;
+  color: #fff;
+}
+
+.navbar-primary .nav-link {
+  transition: background-color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+}
+.navbar-primary .nav-link:hover {
+  background-color: #6417ff;
+}
+
+.side-nav {
+  background-color: #f2f0fa;
+  height: 100vh;
+  width: 12em;
+  position: fixed;
+  z-index: 5;
+  padding-top: 1em;
+}
+.side-nav h2, .side-nav h3, .side-nav h4, .side-nav h5, .side-nav h6 {
+  padding: 0.2em 0.5em;
+}
+
+.body-side-nav {
+  display: grid;
+  grid-template-columns: 12em auto;
+}
+.body-side-nav .body-section {
+  grid-column: 2;
+}
+
+.side-nav a {
+  text-decoration: none !important;
+  color: black !important;
+  padding: 0.3em 0.7em;
+  transition: background-color 0.1s ease;
+  -webkit-transition: background-color 0.1s ease;
+  -moz-transition: background-color 0.1s ease;
+  -ms-transition: background-color 0.1s ease;
+}
+.side-nav a:hover {
+  background-color: #d1caed;
+}
+
+html {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+h6, h5, h4, h3, h2, h1 {
+  font-weight: bold;
+  padding: 0.4em 0;
+}
+
+h1 {
+  font-size: 2.8em;
+}
+
+h2 {
+  font-size: 2.3em;
+}
+
+h3 {
+  font-size: 1.7em;
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
+h5 {
+  font-size: 1.1em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  padding: 0.5em 0;
+}
+
+a {
+  cursor: pointer;
+  color: #7530ff;
+}
+a:visited {
+  color: #d18c00;
+}
+a:hover {
+  color: #6417ff;
+}
+a:active {
+  color: #4c00e3;
+}
+
+ul {
+  list-style: square;
+  margin-left: 1.5em;
+}
+
+ol {
+  list-style: decimal-leading-zero;
+  margin-left: 1.5em;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body-section {
+  padding: 1em 3em;
+}
+.body-section.nav-fixed {
+  margin-top: 3em;
+}
+
+.side-nav.nav-fixed {
+  padding-top: 4em;
+}
+
+.scroll-margin {
+  scroll-margin-top: 3em;
+}
+
+@media all and (max-width: 650px) {
+  .body-section {
+    padding: 1em 0.5em;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  .body-side-nav {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,77 @@
+@use 'colors';
+
+.btn {
+    padding:0.7em 1.8em;
+    border-radius: 7px;
+    border:none;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &:focus{
+        outline:0;
+        box-shadow: 0 0 3px 1.5px #4285F4;
+    }
+
+}
+
+
+.btn-primary {
+    background-color: colors.$primary-color;
+    color:#fff;
+    &:hover {
+        background-color: darken(colors.$primary-color, 5%);
+    }
+    &:active {
+        background-color: darken(colors.$primary-color, 15%);
+    }
+}
+.btn-secondary {
+    background-color: colors.$secondary-color;
+    color:#000;
+    &:hover {
+        background-color: darken(colors.$secondary-color, 10%);
+    }
+    &:active {
+        background-color: darken(colors.$secondary-color, 20%);
+    }
+}
+.btn-success {
+    background-color: colors.$success-color;
+    color:#fff;
+    &:hover {
+        background-color: darken(colors.$success-color, 5%);
+    }
+    &:active {
+        background-color: darken(colors.$success-color, 12%);
+    }
+}
+.btn-danger {
+    background-color: colors.$danger-color;
+    color:#fff;
+    &:hover {
+        background-color: darken(colors.$danger-color, 7%);
+    }
+    &:active {
+        background-color: darken(colors.$danger-color, 17%);
+    }
+}
+.btn-light {
+    background-color: colors.$light-color;
+    color:#000;
+    &:hover {
+        background-color: darken(colors.$light-color, 10%);
+    }
+    &:active {
+        background-color: darken(colors.$light-color, 17%);
+    }
+}
+.btn-dark {
+    background-color: colors.$dark-color;
+    color:#fff;
+    &:hover {
+        background-color: lighten(colors.$dark-color, 9%);
+    }
+    &:active {
+        background-color: lighten(colors.$dark-color, 15%);
+    }
+}

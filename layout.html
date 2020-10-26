@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/documentation.css" rel="stylesheet" />
+    <title>Framework Documentation</title>
+</head>
+<body>
+    <nav class="navbar-primary nav-fixed">
+        <a class="navbar-brand" href="index.html">SASS</a>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="layout.html">Layout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="text.html">Text</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="elements.html">Elements</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="custom.html">Custom</a>
+              </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="body-side-nav">
+        <section class="side-nav nav-fixed">
+            <h4>Layout</h4>
+            <a href="layout.html#grid" class="row">Grid</a>
+            <a href="layout.html#equal-width" class="row">Equal Width</a>
+            <a href="layout.html#col-sizes" class="row">Column Sizes</a>
+            <a href="layout.html#horizontal-alignment" class="row">Horizontal Alignment</a>
+            <a href="layout.html#vertical-alignment" class="row">Vertical Alignment</a>
+
+        </section>
+
+        <section class="body-section nav-fixed">
+            <h1>Layout</h1>
+            <section id="grid" class="scroll-margin">
+                <h2>Grid</h2>
+                <p>This framework uses flex to create a grid like system with 6 vertical splits (3 on mobile). </p>
+                
+                
+                <section id="equal-width" class="container scroll-margin">
+                    <h3>Equal Width</h3>
+                    <p>Elements with the class <code class="n">.col</code> contained in a <code class="n">.row</code> will take up equal widths.</p>
+                    <section class="col-5 self-horizontal-align-center doc-demo-container">
+                        <div class="row doc-demo-display">
+                            <div class="col bordered-container text-horizontal-align-center doc-demo-div">1 of 2 columns</div>
+                            <div class="col bordered-container text-horizontal-align-center doc-demo-div">1 of 2 columns</div>
+                        </div>
+                        <pre class="doc-demo-code">
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span></pre>
+                    </section>
+                </section>
+
+
+                <section id="col-sizes" class="container scroll-margin">
+                    <h3>Col Sizes</h3>
+                    <p>Use the 6 different col sizes to get different responsive sizes relative to the grid. Try resizing to see how the columns change!</p>
+                    <section class="col-5 self-horizontal-align-center doc-demo-container">
+                        <div class="doc-demo-display">
+                            <div class="row"><div class="col-1 bordered-container text-horizontal-align-center doc-demo-div">col-1</div></div>
+                            <div class="row"><div class="col-2 bordered-container text-horizontal-align-center doc-demo-div">col-2</div></div>
+                            <div class="row"><div class="col-3 bordered-container text-horizontal-align-center doc-demo-div">col-3</div></div>
+                            <div class="row"><div class="col-4 bordered-container text-horizontal-align-center doc-demo-div">col-4</div></div>
+                            <div class="row"><div class="col-5 bordered-container text-horizontal-align-center doc-demo-div">col-5</div></div>
+                            <div class="row"><div class="col-6 bordered-container text-horizontal-align-center doc-demo-div">col-6</div></div>
+                        </div>
+                        <pre class="doc-demo-code">
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col-1 bordered-container"</span><span class="b">></span>
+        col-1
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col-2 bordered-container"</span><span class="b">></span>
+        col-2
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col-3 bordered-container"</span><span class="b">></span>
+        col-3
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col-4 bordered-container"</span><span class="b">></span>
+        col-4
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col-5 bordered-container"</span><span class="b">></span>
+        col-5
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col-6 bordered-container"</span><span class="b">></span>
+        col-6
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span></pre>
+                    </section>
+                </section>
+
+
+
+                <section id="horizontal-alignment" class="container scroll-margin">
+                    <h3>Horizontal Alignment</h3>
+                    <p>Use the three classes <code class="n">.content-horizontal-align-left</code> <code class="n">.content-horizontal-align-center</code> <code class="n">.content-horizontal-align-right</code> to horizontally align elements.</p>
+                    <section class="col-5 self-horizontal-align-center doc-demo-container">
+                        <div class="doc-demo-display">
+                            <div class="row content-horizontal-align-left">
+                                <div class="col-2 bordered-container text-horizontal-align-center doc-demo-div">Left</div>
+                            </div>
+                            <div class="row content-horizontal-align-center">
+                                <div class="col-2 bordered-container text-horizontal-align-center doc-demo-div">Center</div>
+                            </div>
+                            <div class="row content-horizontal-align-right">
+                                <div class="col-2 bordered-container text-horizontal-align-center doc-demo-div">Right</div>
+                            </div>
+                        </div>
+                        <pre class="doc-demo-code">
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row content-horizontal-align-left"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col-2 bordered-container"</span><span class="b">></span>
+        Left
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row content-horizontal-align-center"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col-2 bordered-container"</span><span class="b">></span>
+        Center
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row content-horizontal-align-right"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col-2 bordered-container"</span><span class="b">></span>
+        Right
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span></pre>
+                    </section>
+                </section>
+
+
+
+
+                <section id="vertical-alignment" class="container scroll-margin">
+                    <h3>Vertical Alignment</h3>
+                    <p>Use the three classes <code class="n">.content-vertical-align-top</code> <code class="n">.content-vetical-align-center</code> <code class="n">.content-vertical-align-bottom</code> to horizontally align elements.</p>
+                    <section class="col-5 self-horizontal-align-center doc-demo-container doc-demo-multiple">
+                        <div class="row content-vertical-align-top doc-demo-display doc-fixed">
+                            <div class="col bordered-container text-horizontal-align-center doc-demo-div doc-fixed">1 of 2 columns</div>
+                            <div class="col bordered-container text-horizontal-align-center doc-demo-div doc-fixed">1 of 2 columns</div>
+                        </div>
+                        <div class="row content-vertical-align-center doc-demo-display doc-fixed">
+                            <div class="col bordered-container text-horizontal-align-center doc-demo-div doc-fixed">1 of 2 columns</div>
+                            <div class="col bordered-container text-horizontal-align-center doc-demo-div doc-fixed">1 of 2 columns</div>
+                        </div>
+                        <div class="row content-vertical-align-bottom doc-demo-display doc-fixed">
+                            <div class="col bordered-container text-horizontal-align-center doc-demo-div doc-fixed">1 of 2 columns</div>
+                            <div class="col bordered-container text-horizontal-align-center doc-demo-div doc-fixed">1 of 2 columns</div>
+                        </div>
+                        <pre class="doc-demo-code">
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span></pre>
+                    </section>
+                </section>
+                </section>
+            <!-- <div class="row">
+                <div class="col-1 bordered-container text-horizontal-align-center doc-demo-div">col-1</div>
+                <div class="col-5 bordered-container text-horizontal-align-center doc-demo-div">col-5</div>
+            </div>
+            <div class="row">
+                <div class="col-2 bordered-container text-horizontal-align-center doc-demo-div">col-2</div>
+                <div class="col-4 bordered-container text-horizontal-align-center doc-demo-div">col-4</div>
+            </div>
+            <div class="row content-horizontal-align-center">
+                <div class="col-3 bordered-container text-horizontal-align-center doc-demo-div">col-3</div>
+            </div>
+            <div class="row">
+                <div class="col-6 bordered-container text-horizontal-align-center doc-demo-div">col-6</div>
+            </div> -->
+
+            <br>
+            <section id="nav" class="scroll-margin">
+                <h2>Navbar</h2>
+                <p>Top navigation bar with the <code class="n"><code class="n"><</code>nav></code> tag.</p>
+                
+                
+                <section id="equal-width" class="container scroll-margin">
+                    <h3>Equal Width</h3>
+                    <p>Elements with the class <code class="n">.col</code> contained in a <code class="n">.row</code> will take up equal widths.</p>
+                    <section class="col-5 self-horizontal-align-center doc-demo-container">
+                        <div class="row doc-demo-display">
+                            <div class="col bordered-container text-horizontal-align-center doc-demo-div">1 of 2 columns</div>
+                            <div class="col bordered-container text-horizontal-align-center doc-demo-div">1 of 2 columns</div>
+                        </div>
+                        <pre class="doc-demo-code">
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span></pre>
+                    </section>
+                </section>
+
+
+            </section> 
+        </section>
+    </section>
+</body>
+</html>
