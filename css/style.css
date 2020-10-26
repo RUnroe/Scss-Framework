@@ -63,6 +63,7 @@ table {
 
 .btn {
   padding: 0.7em 1.8em;
+  margin: 0.2em;
   border-radius: 7px;
   border: none;
   box-sizing: border-box;
@@ -328,6 +329,51 @@ nav a {
   background-color: #6417ff;
 }
 
+.navbar-secondary {
+  background-color: #ffbd38;
+  color: #000;
+}
+
+.navbar-secondary .nav-link {
+  transition: background-color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+}
+.navbar-secondary .nav-link:hover {
+  background-color: #ffac05;
+}
+
+.navbar-light {
+  background-color: #eee;
+  color: #000;
+}
+
+.navbar-light .nav-link {
+  transition: background-color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+}
+.navbar-light .nav-link:hover {
+  background-color: #d5d5d5;
+}
+
+.navbar-dark {
+  background-color: #252525;
+  color: #fff;
+}
+
+.navbar-dark .nav-link {
+  transition: background-color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+}
+.navbar-dark .nav-link:hover {
+  background-color: #3c3c3c;
+}
+
 .side-nav {
   background-color: #f2f0fa;
   height: 100vh;
@@ -335,6 +381,10 @@ nav a {
   position: fixed;
   z-index: 5;
   padding-top: 1em;
+  overflow-x: hidden;
+}
+.side-nav h5, .side-nav h6 {
+  padding: 0.25em 0;
 }
 
 .body-side-nav {
@@ -356,6 +406,9 @@ nav a {
 }
 .side-nav .link:hover {
   background-color: #d1caed;
+}
+.side-nav .link.nested {
+  padding: 0.3em 1.1em;
 }
 
 .side-nav .head-link {

@@ -4,7 +4,9 @@
 .doc-demo-display {
     padding:2em 1em;
 }
-
+.doc-demo-spacing {
+    padding:1em;
+}
 .doc-demo-div {
     background-color:#f2f0fa;
     border-color:#9388bd;
@@ -15,6 +17,11 @@
     background-color: #d1ffe8;
     padding:1em;
 }
+
+.doc-demo-bg-tint {
+    background-color: #d1ffe8;
+}
+
 .doc-demo-div.doc-fixed {
     height:3em;
 }
@@ -23,5 +30,7 @@
     flex-direction: column;
     gap:0.4em;
 }
-
+.doc-demo-nav {
+    z-index: 4;
+}
 

@@ -16,9 +16,6 @@
                 <a class="nav-link" href="layout.html">Layout</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="text.html">Text</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link active" href="elements.html">Elements</a>
             </li>
               <li class="nav-item">
@@ -32,17 +29,17 @@
       <section class="side-nav nav-fixed">
         <a href="#" class="row head-link"><h4>Elements</h4></a>
           <a href="#buttons" class="row link">Buttons</a>
-          <a href="#" class="row link"><h6>Text</h6></a>
-            <a href="#header-tags" class="row link">Header Tags</a>
-            <a href="#lists" class="row link">Lists</a>
-            <a href="#links" class="row link">Links</a>
+          <a href="#text" class="row link"><h6>Text</h6></a>
+            <a href="#header-tags" class="row link nested">Header Tags</a>
+            <a href="#lists" class="row link nested">Lists</a>
+            <a href="#links" class="row link nested">Links</a>
     </section>
 
 
     <section class="body-section nav-fixed">
       <h1>HTML Elements</h1>
     
-      <section class="container">
+      <section id="buttons" class="container scroll-margin">
         <h3>Buttons</h3>
         <p>Buttons do not have their own default styling. Use the  <code class="n">.btn</code> class to get basic button styling. This class can be used on button, div, and anchor tags.</p>
         <section class="col-5 self-horizontal-align-center doc-demo-container">
@@ -57,30 +54,55 @@
           </div>
       
         <pre class="doc-demo-code">
-    <span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-primary"</span><span class="b">></span>
-      Primary
-    <span class="b"><<span class="b">/button</span>></span>
-    <span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-secondary"</span><span class="b">></span>
-      Secondary
-    <span class="b"><<span class="b">/button</span>></span>
-    <span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-success"</span><span class="b">></span>
-      Success
-    <span class="b"><<span class="b">/button</span>></span>
-    <span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-danger"</span><span class="b">></span>
-      Danger
-    <span class="b"><<span class="b">/button</span>></span>
-    <span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-dark"</span><span class="b">></span>
-      Dark Theme
-    <span class="b"><<span class="b">/button</span>></span>
-    <span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-light"</span><span class="b">></span>
-      Light Theme
-    <span class="b"><<span class="b">/button</span>></span></pre>
-
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-primary"</span><span class="b">></span>
+  Primary
+<span class="b"><<span class="b">/button</span>></span>
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-secondary"</span><span class="b">></span>
+  Secondary
+<span class="b"><<span class="b">/button</span>></span>
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-success"</span><span class="b">></span>
+  Success
+<span class="b"><<span class="b">/button</span>></span>
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-danger"</span><span class="b">></span>
+  Danger
+<span class="b"><<span class="b">/button</span>></span>
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-dark"</span><span class="b">></span>
+  Dark Theme
+<span class="b"><<span class="b">/button</span>></span>
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-light"</span><span class="b">></span>
+  Light Theme
+<span class="b"><<span class="b">/button</span>></span></pre>
 
         </section>
       </section>
-      <section class="body-section nav-fixed">
-        <h1>Text Elements</h1>
+
+
+
+      <section id="containers" class="container scroll-margin">
+        <h3>Containers</h3>
+        <p> <code class="n">.btn</code> class to get basic button styling. This class can be used on button, div, and anchor tags.</p>
+        <section class="col-5 self-horizontal-align-center doc-demo-container">
+        
+          <div class="doc-demo-display doc-demo-bg-tint">
+            <div class="row doc-demo-spacing"><div class="col container">I am a container</div>  </div>
+            <div class="row doc-demo-spacing"><div class="col bordered-container ">I am a bordered container</div> </div>
+          </div>
+      
+        <pre class="doc-demo-code">
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"container"</span><span class="b">></span>
+  I am a container
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"bordered-container"</span><span class="b">></span>
+  I am a bordered container
+<span class="b"><<span class="b">/div</span>></span></pre>
+
+        </section>
+      </section>
+
+
+
+      <section id="text" class="container scroll-margin">
+        <h2>Text Elements</h2>
         
         <section id="header-tags" class="container scroll-margin">
           <h3>Header Tags</h3>
@@ -98,12 +120,12 @@
             </div>
           
           <pre class="doc-demo-code">
-    <span class="b"><<span class="b">h1</span></span><span class="b">></span> h1 Text <span class="b"><<span class="b">/h1</span>></span>
-    <span class="b"><<span class="b">h2</span></span><span class="b">></span> h2 Text <span class="b"><<span class="b">/h2</span>></span>
-    <span class="b"><<span class="b">h3</span></span><span class="b">></span> h3 Text <span class="b"><<span class="b">/h3</span>></span>
-    <span class="b"><<span class="b">h4</span></span><span class="b">></span> h4 Text <span class="b"><<span class="b">/h4</span>></span>
-    <span class="b"><<span class="b">h5</span></span><span class="b">></span> h5 Text <span class="b"><<span class="b">/h5</span>></span>
-    <span class="b"><<span class="b">h6</span></span><span class="b">></span> h6 Text <span class="b"><<span class="b">/h6</span>></span></pre>
+<span class="b"><<span class="b">h1</span></span><span class="b">></span> h1 Text <span class="b"><<span class="b">/h1</span>></span>
+<span class="b"><<span class="b">h2</span></span><span class="b">></span> h2 Text <span class="b"><<span class="b">/h2</span>></span>
+<span class="b"><<span class="b">h3</span></span><span class="b">></span> h3 Text <span class="b"><<span class="b">/h3</span>></span>
+<span class="b"><<span class="b">h4</span></span><span class="b">></span> h4 Text <span class="b"><<span class="b">/h4</span>></span>
+<span class="b"><<span class="b">h5</span></span><span class="b">></span> h5 Text <span class="b"><<span class="b">/h5</span>></span>
+<span class="b"><<span class="b">h6</span></span><span class="b">></span> h6 Text <span class="b"><<span class="b">/h6</span>></span></pre>
           </section>
         </section>
     
@@ -126,25 +148,24 @@
             </div>
         
           <pre class="doc-demo-code">
-    <span class="b"><<span class="b">ul</span></span><span class="b">></span>
-      <span class="b"><<span class="b">li</span></span><span class="b">></span>
-        Unordered 1
-      <span class="b"><<span class="b">/li</span>></span>
-      <span class="b"><<span class="b">li</span></span><span class="b">></span>
-        Unordered 2
-      <span class="b"><<span class="b">/li</span>></span>
-    <span class="b"><<span class="b">/ul</span>></span>
-    
-    
-    <span class="b"><<span class="b">ol</span></span><span class="b">></span>
-      <span class="b"><<span class="b">li</span></span><span class="b">></span>
-        Ordered 1
-      <span class="b"><<span class="b">/li</span>></span>
-      <span class="b"><<span class="b">li</span></span><span class="b">></span>
-        Ordered 2
-      <span class="b"><<span class="b">/li</span>></span>
-    <span class="b"><<span class="b">/ol</span>></span>
-    </pre>
+<span class="b"><<span class="b">ul</span></span><span class="b">></span>
+  <span class="b"><<span class="b">li</span></span><span class="b">></span>
+    Unordered 1
+  <span class="b"><<span class="b">/li</span>></span>
+  <span class="b"><<span class="b">li</span></span><span class="b">></span>
+    Unordered 2
+  <span class="b"><<span class="b">/li</span>></span>
+<span class="b"><<span class="b">/ul</span>></span>
+
+
+<span class="b"><<span class="b">ol</span></span><span class="b">></span>
+  <span class="b"><<span class="b">li</span></span><span class="b">></span>
+    Ordered 1
+  <span class="b"><<span class="b">/li</span>></span>
+  <span class="b"><<span class="b">li</span></span><span class="b">></span>
+    Ordered 2
+  <span class="b"><<span class="b">/li</span>></span>
+<span class="b"><<span class="b">/ol</span>></span></pre>
           </section>
         </section>
     
@@ -159,16 +180,20 @@
             </div>
         
           <pre class="doc-demo-code">
-      <span class="b"><<span class="b">a</span></span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
-        This is a link tag
-      <span class="b"><<span class="b">/a</span>></span></pre>
+<span class="b"><<span class="b">a</span></span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
+  This is a link tag
+<span class="b"><<span class="b">/a</span>></span></pre>
           </section>
         </section>
+
+        <!-- End text -->
         </section>
 
-        
-    </section>
 
+
+
+        <!--End body section  -->
+    </section>
 </section>
 </body>
 </html>

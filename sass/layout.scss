@@ -177,11 +177,40 @@ nav a {
     background-color: colors.$primary-color;
     color:#fff;
 }
-
 .navbar-primary .nav-link {
     @include mixins.transition(background-color 0.2s ease);
     &:hover {
         background-color: darken(colors.$primary-color, 5%);
+    }
+}
+.navbar-secondary {
+    background-color: colors.$secondary-color;
+    color:#000;
+}
+.navbar-secondary .nav-link {
+    @include mixins.transition(background-color 0.2s ease);
+    &:hover {
+        background-color: darken(colors.$secondary-color, 10%);
+    }
+}
+.navbar-light {
+    background-color: colors.$light-color;
+    color:#000;
+}
+.navbar-light .nav-link {
+    @include mixins.transition(background-color 0.2s ease);
+    &:hover {
+        background-color: darken(colors.$light-color, 10%);
+    }
+}
+.navbar-dark {
+    background-color: colors.$dark-color;
+    color:#fff;
+}
+.navbar-dark .nav-link {
+    @include mixins.transition(background-color 0.2s ease);
+    &:hover {
+        background-color: lighten(colors.$dark-color, 9%);
     }
 }
 
@@ -201,7 +230,10 @@ nav a {
     position: fixed;
     z-index: 5;
     padding-top:1em;
-
+    h5,h6 {
+        padding: 0.25em 0;
+    }
+    overflow-x:hidden;
 }
 
 .body-side-nav {
@@ -219,6 +251,9 @@ nav a {
     @include mixins.transition(background-color 0.1s ease);
     &:hover {
         background-color: darken(colors.$code-bg-color, 10);
+    }
+    &.nested {
+        padding:0.3em 1.1em;
     }
 }
 .side-nav .head-link {

@@ -16,9 +16,6 @@
                 <a class="nav-link active" href="#">Layout</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="text.html">Text</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="elements.html">Elements</a>
               </li>
               <li class="nav-item">
@@ -32,10 +29,13 @@
         <section class="side-nav nav-fixed">
             <a href="#" class="row head-link"><h4>Layout</h4></a>
             <a href="#grid" class="row link"><h6>Grid</h6></a>
-            <a href="#equal-width" class="row link">Equal Width</a>
-            <a href="#col-sizes" class="row link">Column Sizes</a>
-            <a href="#horizontal-alignment" class="row link">Horizontal Alignment</a>
-            <a href="#vertical-alignment" class="row link">Vertical Alignment</a>
+            <a href="#equal-width" class="row link nested">Equal Width</a>
+            <a href="#col-sizes" class="row link nested">Column Sizes</a>
+            <a href="#horizontal-alignment" class="row link nested">Horizontal Alignment</a>
+            <a href="#vertical-alignment" class="row link nested">Vertical Alignment</a>
+            <a href="#nav" class="row link"><h6>Navbar</h6></a>
+            <a href="#header" class="row link"><h6>Header</h6></a>
+            <a href="#footer" class="row link"><h6>Footer</h6></a>
 
         </section>
 
@@ -179,26 +179,107 @@
 <span class="b"><<span class="b">/div</span>></span></pre>
                     </section>
                 </section>
+                <!-- End Grid -->
                 </section>
-            <!-- <div class="row">
-                <div class="col-1 bordered-container text-horizontal-align-center doc-demo-div">col-1</div>
-                <div class="col-5 bordered-container text-horizontal-align-center doc-demo-div">col-5</div>
-            </div>
-            <div class="row">
-                <div class="col-2 bordered-container text-horizontal-align-center doc-demo-div">col-2</div>
-                <div class="col-4 bordered-container text-horizontal-align-center doc-demo-div">col-4</div>
-            </div>
-            <div class="row content-horizontal-align-center">
-                <div class="col-3 bordered-container text-horizontal-align-center doc-demo-div">col-3</div>
-            </div>
-            <div class="row">
-                <div class="col-6 bordered-container text-horizontal-align-center doc-demo-div">col-6</div>
-            </div> -->
+            
+
 
             <br>
             <section id="nav" class="scroll-margin">
                 <h2>Navbar</h2>
-                <p>Top navigation bar with the <code class="n"><code class="n"><</code>nav></code> tag.</p>
+                <p>Top and side navigation bars. Top nav uses the <code class="n"><code class="n"><</code>nav></code> tag. Side nav bar uses sections or divs with specific classes.</p>
+                
+                
+                <section id="equal-width" class="container scroll-margin">
+                    <h3>Top Nav</h3>
+                    <p>Top nav bars come with four different styles: <code class="n">.navbar-primary</code> <code class="n">.navbar-secondary</code> 
+                    <code class="n">.navbar-light</code> and <code class="n">.navbar-dark</code> which get applied directly to the <code class="n"><code class="n"><</code>nav></code> tag.</p>
+                    <section class="col-5 self-horizontal-align-center doc-demo-container">
+                        <div class="doc-demo-display">
+                            <nav class="navbar-primary doc-demo-nav">
+                                <a class="navbar-brand" href="index.html">Brand</a>
+                                <div class="navbar-collapse">
+                                    <ul class="navbar-nav">
+                                      <li class="nav-item">
+                                        <a class="nav-link">Tab 1</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link">Tab 2</a>
+                                    </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link">Tab 3</a>
+                                      </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <nav class="navbar-secondary doc-demo-nav">
+                                <a class="navbar-brand" href="index.html">Brand</a>
+                                <div class="navbar-collapse">
+                                    <ul class="navbar-nav">
+                                      <li class="nav-item">
+                                        <a class="nav-link">Tab 1</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link">Tab 2</a>
+                                    </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link">Tab 3</a>
+                                      </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <nav class="navbar-light doc-demo-nav">
+                                <a class="navbar-brand" href="index.html">Brand</a>
+                                <div class="navbar-collapse">
+                                    <ul class="navbar-nav">
+                                      <li class="nav-item">
+                                        <a class="nav-link">Tab 1</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link">Tab 2</a>
+                                    </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link">Tab 3</a>
+                                      </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <nav class="navbar-dark doc-demo-nav">
+                                <a class="navbar-brand" href="index.html">Brand</a>
+                                <div class="navbar-collapse">
+                                    <ul class="navbar-nav">
+                                      <li class="nav-item">
+                                        <a class="nav-link">Tab 1</a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link">Tab 2</a>
+                                    </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link">Tab 3</a>
+                                      </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <pre class="doc-demo-code">
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span></pre>
+                    </section>
+                </section>
+
+                <!-- End Nav -->
+            </section>
+            
+
+            <section id="header" class="scroll-margin">
+                <h2>Header</h2>
+                <p>Header paragraph tag. CHANGE ME </p>
                 
                 
                 <section id="equal-width" class="container scroll-margin">
@@ -220,9 +301,41 @@
 <span class="b"><<span class="b">/div</span>></span></pre>
                     </section>
                 </section>
+            
+                <!-- End Header -->
+            </section>
 
 
-            </section> 
+            
+
+
+            <section id="footer" class="scroll-margin">
+                <h2>Footer</h2>
+                <p>Footer paragraph tag. CHANGE ME </p>
+                
+                
+                <section id="equal-width" class="container scroll-margin">
+                    <h3>Equal Width</h3>
+                    <p>Elements with the class <code class="n">.col</code> contained in a <code class="n">.row</code> will take up equal widths.</p>
+                    <section class="col-5 self-horizontal-align-center doc-demo-container">
+                        <div class="row doc-demo-display">
+                            <div class="col bordered-container text-horizontal-align-center doc-demo-div">1 of 2 columns</div>
+                            <div class="col bordered-container text-horizontal-align-center doc-demo-div">1 of 2 columns</div>
+                        </div>
+                        <pre class="doc-demo-code">
+<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
+        1 of 2 columns
+    <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span></pre>
+                    </section>
+                </section>
+            
+                <!-- End footer -->
+            </section>
         </section>
     </section>
 </body>
