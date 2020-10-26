@@ -201,10 +201,7 @@ nav a {
     position: fixed;
     z-index: 5;
     padding-top:1em;
-    h2, h3, h4, h5, h6 {
-        padding:0.2em 0.5em;
-        display:inline-block;
-    }
+
 }
 
 .body-side-nav {
@@ -215,17 +212,17 @@ nav a {
     }
 }
 
-
 .side-nav .link {
-    text-decoration: none!important;
-    color:black!important;
     padding:0.3em 0.7em;
+    text-decoration: none!important;
+    color:#333!important;
     @include mixins.transition(background-color 0.1s ease);
     &:hover {
         background-color: darken(colors.$code-bg-color, 10);
     }
 }
 .side-nav .head-link {
+    padding:0.2em 0.5em;
     text-decoration: none!important;
     color:black!important;
 }
