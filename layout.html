@@ -38,8 +38,8 @@
                 <a href="#side-nav" class="row link nested">Side Nav</a>
             <a href="#header" class="row link"><h6>Header</h6></a>
             <a href="#footer" class="row link"><h6>Footer</h6></a>
-            <a href="#form" class="row link"><h6>Forms</h6></a>
-            <a href="#table-section" class="row link"><h6>Tables</h6></a>
+            <a href="#form" class="row link"><h6>Form</h6></a>
+            <a href="#table-section" class="row link"><h6>Table</h6></a>
                 <a href="#default-table" class="row link nested">Default Table</a>
                 <a href="#themed-table" class="row link nested">Themed Table</a>
                 <a href="#striped-table" class="row link nested">Striped Table</a>
@@ -438,8 +438,17 @@
                 <p></p>
                 <section class="col-5 self-horizontal-align-center doc-demo-container">
                     <div class="row doc-demo-display">
-                        <div class="col bordered-container text-horizontal-align-center doc-demo-div">1 of 2 columns</div>
-                        <div class="col bordered-container text-horizontal-align-center doc-demo-div">1 of 2 columns</div>
+                        
+                        <form>
+                            <label>Name</label>
+                            <input type="text" placeholder="Name">
+                            <label>Email</label>
+                            <input type="text" placeholder="johndoe@example.com">
+                            <div class="row content-horizontal-align-center">
+                                <input type="submit" class="btn btn-dark">
+                            </div>
+                        </form>
+
                     </div>
                     <pre class="doc-demo-code">
 <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
@@ -616,7 +625,7 @@
                         <div class="doc-demo-display">
                             <table>
                                 <thead class="table-primary">
-                                    <tr >
+                                    <tr>
                                         <th>Col 1</th>
                                         <th>Col 2</th>
                                         <th>Col 3</th>

@@ -156,139 +156,6 @@ table {
   border-radius: 0 7px 7px 0;
 }
 
-.row {
-  display: flex;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.content-horizontal-align-left {
-  justify-content: flex-start !important;
-}
-
-.content-horizontal-align-center {
-  justify-content: center !important;
-}
-
-.content-horizontal-align-right {
-  justify-content: flex-end !important;
-}
-
-.content-vertical-align-top {
-  align-items: flex-start !important;
-}
-
-.content-vertical-align-center {
-  align-items: center !important;
-}
-
-.content-vertical-align-bottom {
-  align-items: flex-end !important;
-}
-
-.self-horizontal-align-center {
-  margin: auto;
-}
-
-.text-horizontal-align-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.col {
-  flex: 1;
-  max-width: 100%;
-}
-
-.col-1 {
-  flex: 0 0 16.6666666667%;
-  max-width: 16.6666666667%;
-}
-
-.col-2 {
-  flex: 0 0 33.3333333333%;
-  max-width: 33.3333333333%;
-}
-
-.col-3 {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.col-4 {
-  flex: 0 0 66.6666666667%;
-  max-width: 66.6666666667%;
-}
-
-.col-5 {
-  flex: 0 0 83.3333333333%;
-  max-width: 83.3333333333%;
-}
-
-.col-6 {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-@media all and (max-width: 650px) {
-  .row {
-    flex-wrap: wrap;
-  }
-
-  .col-1 {
-    flex: 0 0 33.3333333333%;
-    max-width: 33.3333333333%;
-  }
-
-  .col-2 {
-    flex: 0 0 66.6666666667%;
-    max-width: 66.6666666667%;
-  }
-
-  .col-3, .col-4, .col-5, .col-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-.bordered-container, .container {
-  color: #000;
-  background-color: #fff;
-  padding: 1em 0.5em;
-}
-
-.bordered-container {
-  border: 2px solid #000;
-  box-sizing: border-box;
-}
-
-.b {
-  color: #2f63de;
-}
-
-.n {
-  color: #d93256;
-}
-
-.kw {
-  color: #019413;
-}
-
-pre {
-  background-color: #f2f0fa;
-  padding: 2em;
-  overflow: scroll;
-}
-
-pre, code {
-  font-family: "Courier New", Courier, monospace;
-}
-
-code {
-  background-color: #f2f0fa;
-}
-
 nav {
   position: relative;
   top: 0;
@@ -433,6 +300,139 @@ nav a {
   color: black !important;
 }
 
+.row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-horizontal-align-left {
+  justify-content: flex-start !important;
+}
+
+.content-horizontal-align-center {
+  justify-content: center !important;
+}
+
+.content-horizontal-align-right {
+  justify-content: flex-end !important;
+}
+
+.content-vertical-align-top {
+  align-items: flex-start !important;
+}
+
+.content-vertical-align-center {
+  align-items: center !important;
+}
+
+.content-vertical-align-bottom {
+  align-items: flex-end !important;
+}
+
+.self-horizontal-align-center {
+  margin: auto;
+}
+
+.text-horizontal-align-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.col {
+  flex: 1;
+  max-width: 100%;
+}
+
+.col-1 {
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+
+.col-2 {
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+
+.col-3 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-4 {
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%;
+}
+
+.col-5 {
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
+
+.col-6 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media all and (max-width: 650px) {
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .col-1 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+
+  .col-2 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+
+  .col-3, .col-4, .col-5, .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.bordered-container, .container {
+  color: #000;
+  background-color: #fff;
+  padding: 1em 0.5em;
+}
+
+.bordered-container {
+  border: 2px solid #000;
+  box-sizing: border-box;
+}
+
+.b {
+  color: #2f63de;
+}
+
+.n {
+  color: #d93256;
+}
+
+.kw {
+  color: #019413;
+}
+
+pre {
+  background-color: #f2f0fa;
+  padding: 2em;
+  overflow: scroll;
+}
+
+pre, code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+code {
+  background-color: #f2f0fa;
+}
+
 html {
   font-family: "Trebuchet MS", Verdana, sans-serif;
 }
@@ -512,7 +512,7 @@ img {
 }
 
 input[type=text] {
-  margin: 0.4em 0;
+  margin: 0.4em 0 1em 0;
   padding: 0.5em;
   width: 100%;
   box-sizing: border-box;
@@ -526,6 +526,14 @@ input[type=text] {
 }
 input[type=text]:focus {
   border: 2.5px solid #333;
+}
+
+form {
+  width: 100%;
+}
+
+label {
+  display: block;
 }
 
 table {
