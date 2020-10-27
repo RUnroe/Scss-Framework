@@ -18,9 +18,6 @@
               <li class="nav-item">
                 <a class="nav-link active" href="elements.html">Elements</a>
             </li>
-              <li class="nav-item">
-                <a class="nav-link" href="custom.html">Custom</a>
-              </li>
             </ul>
         </div>
     </nav>
@@ -28,8 +25,12 @@
     <section class="body-side-nav">
       <section class="side-nav nav-fixed">
         <a href="#" class="row head-link"><h4>Elements</h4></a>
-          <a href="#buttons" class="row link">Buttons</a>
           <a href="#containers" class="row link">Containers</a>
+          <a href="#input-fields" class="row link">Input Fields</a>
+          <a href="#images" class="row link">Images</a>
+          <a href="#button-section" class="row link"><h6>Buttons</h6></a>
+            <a href="#buttons" class="row link nested">Buttons</a>
+            <a href="#button-group" class="row link nested">Button Group</a>
           <a href="#text" class="row link"><h6>Text</h6></a>
             <a href="#header-tags" class="row link nested">Header Tags</a>
             <a href="#lists" class="row link nested">Lists</a>
@@ -40,43 +41,6 @@
     <section class="body-section nav-fixed">
       <h1>HTML Elements</h1>
     
-      <section id="buttons" class="container scroll-margin">
-        <h3>Buttons</h3>
-        <p>Buttons do not have their own default styling. Use the  <code class="n">.btn</code> class to get basic button styling. This class can be used on button, div, and anchor tags.</p>
-        <section class="col-5 self-horizontal-align-center doc-demo-container">
-        
-          <div class=" doc-demo-display">
-            <button class="btn btn-primary">Primary</button>
-            <button class="btn btn-secondary">Secondary</button>
-            <button class="btn btn-success">Success</button>
-            <button class="btn btn-danger">Danger</button>
-            <button class="btn btn-dark">Dark Theme</button>
-            <button class="btn btn-light">Light Theme</button>       
-          </div>
-      
-        <pre class="doc-demo-code">
-<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-primary"</span><span class="b">></span>
-  Primary
-<span class="b"><<span class="b">/button</span>></span>
-<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-secondary"</span><span class="b">></span>
-  Secondary
-<span class="b"><<span class="b">/button</span>></span>
-<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-success"</span><span class="b">></span>
-  Success
-<span class="b"><<span class="b">/button</span>></span>
-<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-danger"</span><span class="b">></span>
-  Danger
-<span class="b"><<span class="b">/button</span>></span>
-<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-dark"</span><span class="b">></span>
-  Dark Theme
-<span class="b"><<span class="b">/button</span>></span>
-<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-light"</span><span class="b">></span>
-  Light Theme
-<span class="b"><<span class="b">/button</span>></span></pre>
-
-        </section>
-      </section>
-
 
 
       <section id="containers" class="container scroll-margin">
@@ -100,26 +64,126 @@
         </section>
       </section>
 
-
-      <section id="images" class="container scroll-margin">
-        <h3>Images</h3>
-        <p> <code class="n">.btn</code> class to get basic button styling. This class can be used on button, div, and anchor tags.</p>
+      <section id="input-fields" class="container scroll-margin">
+        <h3>Input Fields</h3>
+        <p>By default, text input fields take up 100% width. Use <code class="n">.col-#</code> classes to change the size in a responsive manner (shown below). Submit inputs can use button classes as shown below. </p>
         <section class="col-5 self-horizontal-align-center doc-demo-container">
         
           <div class="doc-demo-display">
-            <img src="https://via.placeholder.com/150" />
+            
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Name" class="col-2">
+            <div class="row content-horizontal-align-center">
+              <input type="submit" class="btn btn-dark">
+            </div>
           </div>
       
         <pre class="doc-demo-code">
-<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"container"</span><span class="b">></span>
-  I am a container
-<span class="b"><<span class="b">/div</span>></span>
-<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"bordered-container"</span><span class="b">></span>
-  I am a bordered container
+<span class="b"><<span class="b">input</span></span> <span class="kw">type=</span><span class="n">"text"</span> <span class="kw">placeholder=</span><span class="n">"Name"</span><span class="b"> /></span>
+<span class="b"><<span class="b">input</span></span> <span class="kw">type=</span><span class="n">"text"</span> <span class="kw">placeholder=</span><span class="n">"Name"</span><span class="b"> <span class="kw">class=</span><span class="n">"col-2"</span> /></span>
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"row content-horizontal-align-center"</span><span class="b">></span>
+  <span class="b"><<span class="b">input</span></span> <span class="kw">type=</span><span class="n">"submit"</span> <span class="kw">class=</span><span class="n">"btn btn-dark"</span><span class="b"> /></span>
 <span class="b"><<span class="b">/div</span>></span></pre>
 
         </section>
       </section>
+
+
+      <section id="images" class="container scroll-margin">
+        <h3>Images</h3>
+        <p>By default, <code class="n"><<code class="n">img></code></code> tags will take up the max width of their parent and scale with their parent.</p>
+        <section class="col-5 self-horizontal-align-center doc-demo-container">
+        
+          <div class="doc-demo-display content-horizontal-align-center row">
+            <img src="https://via.placeholder.com/150" />
+            <img src="https://via.placeholder.com/150" />
+            <img src="https://via.placeholder.com/150" />
+          </div>
+      
+        <pre class="doc-demo-code">
+<span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">"https://via.placeholder.com/150"</span><span class="b"> /></span>
+<span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">"https://via.placeholder.com/150"</span><span class="b"> /></span>
+<span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">"https://via.placeholder.com/150"</span><span class="b"> /></span>
+
+        </section>
+      </section>
+
+
+
+      <section id="button-section" class="container scroll-margin">
+        <h2>Buttons</h2>
+
+        <section id="buttons" class="container scroll-margin">
+          <h3>Buttons</h3>
+          <p>Buttons do not have their own default styling. Use the  <code class="n">.btn</code> class to get basic button styling. This class can be used on button, div, and anchor tags.</p>
+          <section class="col-5 self-horizontal-align-center doc-demo-container">
+          
+            <div class=" doc-demo-display">
+              <button class="btn btn-primary">Primary</button>
+              <button class="btn btn-secondary">Secondary</button>
+              <button class="btn btn-success">Success</button>
+              <button class="btn btn-danger">Danger</button>
+              <button class="btn btn-dark">Dark Theme</button>
+              <button class="btn btn-light">Light Theme</button>       
+            </div>
+        
+          <pre class="doc-demo-code">
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-primary"</span><span class="b">></span>
+  Primary
+<span class="b"><<span class="b">/button</span>></span>
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-secondary"</span><span class="b">></span>
+  Secondary
+<span class="b"><<span class="b">/button</span>></span>
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-success"</span><span class="b">></span>
+  Success
+<span class="b"><<span class="b">/button</span>></span>
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-danger"</span><span class="b">></span>
+  Danger
+<span class="b"><<span class="b">/button</span>></span>
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-dark"</span><span class="b">></span>
+  Dark Theme
+<span class="b"><<span class="b">/button</span>></span>
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-light"</span><span class="b">></span>
+  Light Theme
+<span class="b"><<span class="b">/button</span>></span></pre>
+
+        </section>
+      </section>
+
+
+      <section id="button-group" class="container scroll-margin">
+        <h3>Button Group</h3>
+        <p>Buttons do not have their own default styling. Use the  <code class="n">.btn</code> class to get basic button styling. This class can be used on button, div, and anchor tags.</p>
+        <section class="col-5 self-horizontal-align-center doc-demo-container">
+        
+          <div class=" doc-demo-display row content-horizontal-align-center">
+            <div class="btn-group">
+              <button class="btn btn-primary">Left</button>
+              <button class="btn btn-primary">Center</button>
+              <button class="btn btn-primary">Right</button>
+            </div>
+             
+          </div>
+      
+        <pre class="doc-demo-code">
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"btn-group"</span><span class="b">></span>   
+  <span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-primary"</span><span class="b">></span>
+    Left
+  <span class="b"><<span class="b">/button</span>></span>
+  <span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-primary"</span><span class="b">></span>
+    Center
+  <span class="b"><<span class="b">/button</span>></span>
+  <span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-primary"</span><span class="b">></span>
+    Right
+  <span class="b"><<span class="b">/button</span>></span>
+<span class="b"><<span class="b">/div</span>></span></pre>
+
+      </section>
+    </section>
+    <!-- End button section -->
+    </section>
+
+      
 
 
       <section id="text" class="container scroll-margin">

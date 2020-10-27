@@ -1,9 +1,10 @@
 @use 'colors';
 
+$border-radius: 7px;
 .btn {
     padding:0.7em 1.8em;
     margin:0.2em;
-    border-radius: 7px;
+    border-radius: $border-radius;
     border:none;
     box-sizing: border-box;
     cursor: pointer;
@@ -76,3 +77,23 @@
         background-color: lighten(colors.$dark-color, 15%);
     }
 }
+
+
+.btn-group {
+    display:inline-flex;
+    .btn {
+        position: relative;
+        flex:1;
+        margin:0;
+        border-radius: 0;
+        &:first-child {
+            border-radius: $border-radius 0 0 $border-radius;
+        }
+        &:last-child {
+            border-radius: 0 $border-radius $border-radius 0;
+        }
+    }
+    
+}
+
+
