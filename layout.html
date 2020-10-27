@@ -422,22 +422,25 @@
                 
             <section id="footer" class="container scroll-margin">
                 <h2>Footer</h2>
-                <p>Footer paragraph tag. CHANGE ME </p>
+                <p>Footers by default take up the whole width of its container and fits the height of its content. It has four theme classes to choose from: 
+                    <code class="n">.footer-primary</code> <code class="n">.footer-secondary</code> <code class="n">.footer-light</code> and <code class="n">.footer-dark</code>.  </p>
                 <section class="col-5 self-horizontal-align-center doc-demo-container">
-                    <div class="row doc-demo-display">
-                        <footer>
-                            SASS Framework Demo    
+                    <div class="doc-demo-display">
+                        <footer class="footer-primary">
+                            Footer Primary Demo    
+                        </footer>
+                        <footer class="footer-dark">
+                            Footer Dark Demo       
                         </footer>
                     </div>
                     <pre class="doc-demo-code">
-<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
-    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
-        1 of 2 columns
-    <span class="b"><<span class="b">/div</span>></span>
-    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
-        1 of 2 columns
-    <span class="b"><<span class="b">/div</span>></span>
-<span class="b"><<span class="b">/div</span>></span></pre>
+<span class="b"><<span class="b">footer</span> </span><span class="kw">class=</span><span class="n">"footer-primary"</span><span class="b">></span>
+  Footer Primary Demo
+<span class="b"><<span class="b">/footer</span>></span>
+
+<span class="b"><<span class="b">footer</span> </span><span class="kw">class=</span><span class="n">"footer-dark"</span><span class="b">></span>
+  Footer Dark Demo
+<span class="b"><<span class="b">/footer</span>></span></pre>
                 </section>
             </section>
             
@@ -460,14 +463,19 @@
 
                     </div>
                     <pre class="doc-demo-code">
-<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
-    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
-        1 of 2 columns
-    <span class="b"><<span class="b">/div</span>></span>
-    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
-        1 of 2 columns
-    <span class="b"><<span class="b">/div</span>></span>
-<span class="b"><<span class="b">/div</span>></span></pre>
+<span class="b"><<span class="b">form</span></span><span class="b">></span>
+  <span class="b"><<span class="b">label</span></span><span class="b">></span>
+    Name
+  <span class="b"><<span class="b">/label</span>></span>
+  <span class="b"><<span class="b">input</span> </span><span class="kw">type=</span><span class="n">"text"</span> <span class="kw">placeholder=</span><span class="n">"Name"</span> <span class="b">/></span>
+  <span class="b"><<span class="b">label</span></span><span class="b">></span>
+    Email
+  <span class="b"><<span class="b">/label</span>></span>
+  <span class="b"><<span class="b">input</span> </span><span class="kw">type=</span><span class="n">"text"</span> <span class="kw">placeholder=</span><span class="n">"johndoe@example.com"</span> <span class="b">/></span>
+  <span class="b"><<span class="b">div</span></span> </span><span class="kw">class=</span><span class="n">"row content-horizontal-align-center"</span><span class="b">></span>
+    <span class="b"><<span class="b">input</span> </span><span class="kw">type=</span><span class="n">"submit"</span> <span class="kw">class=</span><span class="n">"btn btn-dark"</span> <span class="b">/></span>
+  <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/form</span>></span></pre>
                 </section>
             </section>
 
@@ -774,8 +782,9 @@
             </section>
 
 
-
+            
         </section>
+        
     </section>
 </body>
 </html>

@@ -144,21 +144,21 @@ header {
     box-sizing: border-box;
 }
 
-header.header-primary {
+footer.footer-primary, header.header-primary {
     background-color: colors.$primary-color;
     color:#fff;
 }
 
-header.header-secondary {
+footer.footer-secondary, header.header-secondary {
     background-color: colors.$secondary-color;
     color:#000;
 }
-header.header-light {
+footer.footer-light, header.header-light {
     background-color: #fff;
     color:#000;
 }
 
-header.header-dark {
+footer.footer-dark, header.header-dark {
     background-color: colors.$dark-color;
     color:#fff;
 }
@@ -169,5 +169,12 @@ header.header-dark {
 //Footer
 
 
-
+footer {
+    width:100%;
+    background-color: #fff;
+    margin:0;
+    padding:2em;
+    text-align: center;
+    box-sizing: border-box;
+}
 

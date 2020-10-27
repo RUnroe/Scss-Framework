@@ -95,7 +95,8 @@ nav a {
     width:12em;
     position: fixed;
     z-index: 5;
-    padding-top:1em;
+    padding:0.5em;
+    box-sizing: border-box;
     h5,h6 {
         padding: 0.25em 0;
     }
@@ -105,7 +106,7 @@ nav a {
 .body-side-nav {
     display:grid;
     grid-template-columns: 12em auto;
-    .body-section {
+    .body-section, header, footer {
         grid-column: 2;
     }
 }

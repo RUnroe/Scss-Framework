@@ -263,7 +263,8 @@ nav a {
   width: 12em;
   position: fixed;
   z-index: 5;
-  padding-top: 1em;
+  padding: 0.5em;
+  box-sizing: border-box;
   overflow-x: hidden;
 }
 .side-nav h5, .side-nav h6 {
@@ -274,7 +275,7 @@ nav a {
   display: grid;
   grid-template-columns: 12em auto;
 }
-.body-side-nav .body-section {
+.body-side-nav .body-section, .body-side-nav header, .body-side-nav footer {
   grid-column: 2;
 }
 
@@ -442,24 +443,33 @@ header {
   box-sizing: border-box;
 }
 
-header.header-primary {
+footer.footer-primary, header.header-primary {
   background-color: #7530ff;
   color: #fff;
 }
 
-header.header-secondary {
+footer.footer-secondary, header.header-secondary {
   background-color: #ffbd38;
   color: #000;
 }
 
-header.header-light {
+footer.footer-light, header.header-light {
   background-color: #fff;
   color: #000;
 }
 
-header.header-dark {
+footer.footer-dark, header.header-dark {
   background-color: #252525;
   color: #fff;
+}
+
+footer {
+  width: 100%;
+  background-color: #fff;
+  margin: 0;
+  padding: 2em;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 html {
