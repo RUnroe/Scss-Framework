@@ -390,21 +390,29 @@
                 
             <section id="header" class="container scroll-margin">
                 <h2>Header</h2>
-                <p>Header paragraph tag. CHANGE ME </p>
+                <p>Headers by default take up the whole width of its container and fits the height of its content. It has four theme classes to choose from: 
+                <code class="n">.header-primary</code> <code class="n">.header-secondary</code> <code class="n">.header-light</code> and <code class="n">.header-dark</code>.  </p>
                 <section class="col-5 self-horizontal-align-center doc-demo-container">
-                    <div class="row doc-demo-display">
-                        <div class="col bordered-container text-horizontal-align-center doc-demo-div">1 of 2 columns</div>
-                        <div class="col bordered-container text-horizontal-align-center doc-demo-div">1 of 2 columns</div>
+                    <div class="doc-demo-display doc-demo-bg-tint">
+                        <header class="header-light">
+                            <h1>Light</h1>
+                        </header>
+                        <header class="header-dark">
+                            <h1>Dark</h1>
+                        </header>
                     </div>
                         <pre class="doc-demo-code">
-<span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>
-    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
-        1 of 2 columns
-    <span class="b"><<span class="b">/div</span>></span>
-    <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"col bordered-container"</span><span class="b">></span>
-        1 of 2 columns
-    <span class="b"><<span class="b">/div</span>></span>
-<span class="b"><<span class="b">/div</span>></span></pre>
+<span class="b"><<span class="b">header</span> </span><span class="kw">class=</span><span class="n">"header-light"</span><span class="b">></span>
+  <span class="b"><<span class="b">h1</span></span><span class="b">></span>
+    Light
+  <span class="b"><<span class="b">/h1</span>></span>
+<span class="b"><<span class="b">/header</span>></span>
+
+<span class="b"><<span class="b">header</span> </span><span class="kw">class=</span><span class="n">"header-dark"</span><span class="b">></span>
+  <span class="b"><<span class="b">h1</span></span><span class="b">></span>
+    Dark
+  <span class="b"><<span class="b">/h1</span>></span>
+<span class="b"><<span class="b">/header</span>></span></pre>
                 </section>
             </section>
             
@@ -417,8 +425,9 @@
                 <p>Footer paragraph tag. CHANGE ME </p>
                 <section class="col-5 self-horizontal-align-center doc-demo-container">
                     <div class="row doc-demo-display">
-                        <div class="col bordered-container text-horizontal-align-center doc-demo-div">1 of 2 columns</div>
-                        <div class="col bordered-container text-horizontal-align-center doc-demo-div">1 of 2 columns</div>
+                        <footer>
+                            SASS Framework Demo    
+                        </footer>
                     </div>
                     <pre class="doc-demo-code">
 <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"row"</span> <span class="b">></span>

@@ -433,6 +433,35 @@ code {
   background-color: #f2f0fa;
 }
 
+header {
+  width: 100%;
+  background-color: #fff;
+  margin: 0;
+  padding: 2em;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+header.header-primary {
+  background-color: #7530ff;
+  color: #fff;
+}
+
+header.header-secondary {
+  background-color: #ffbd38;
+  color: #000;
+}
+
+header.header-light {
+  background-color: #fff;
+  color: #000;
+}
+
+header.header-dark {
+  background-color: #252525;
+  color: #fff;
+}
+
 html {
   font-family: "Trebuchet MS", Verdana, sans-serif;
 }

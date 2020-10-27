@@ -136,8 +136,37 @@ code {
 //Header
 
 header {
-    
+    width:100%;
+    background-color: #fff;
+    margin:0;
+    padding:2em;
+    text-align: center;
+    box-sizing: border-box;
 }
+
+header.header-primary {
+    background-color: colors.$primary-color;
+    color:#fff;
+}
+
+header.header-secondary {
+    background-color: colors.$secondary-color;
+    color:#000;
+}
+header.header-light {
+    background-color: #fff;
+    color:#000;
+}
+
+header.header-dark {
+    background-color: colors.$dark-color;
+    color:#fff;
+}
+
+
+
+
+//Footer
 
 
 
