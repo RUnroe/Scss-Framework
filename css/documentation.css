@@ -34,3 +34,14 @@
     z-index: 4;
 }
 
+.doc-demo-body-section {
+    width:100%;
+}
+.doc-demo-body-side{
+    width: 100%;
+}
+.doc-demo-side-nav {
+    position: relative;
+    height: 20em;
+    padding-top:0;
+}

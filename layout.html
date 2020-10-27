@@ -13,6 +13,9 @@
         <div class="navbar-collapse">
             <ul class="navbar-nav">
               <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link active" href="#">Layout</a>
               </li>
               <li class="nav-item">
@@ -31,6 +34,8 @@
             <a href="#horizontal-alignment" class="row link nested">Horizontal Alignment</a>
             <a href="#vertical-alignment" class="row link nested">Vertical Alignment</a>
             <a href="#nav" class="row link"><h6>Navbar</h6></a>
+                <a href="#top-nav" class="row link nested">Top Nav</a>
+                <a href="#side-nav" class="row link nested">Side Nav</a>
             <a href="#header" class="row link"><h6>Header</h6></a>
             <a href="#footer" class="row link"><h6>Footer</h6></a>
 
@@ -205,10 +210,12 @@
                 <p>Top and side navigation bars. Top nav uses the <code class="n"><code class="n"><</code>nav></code> tag. Side nav bar uses sections or divs with specific classes.</p>
                 
                 
-                <section id="equal-width" class="container scroll-margin">
+                <section id="top-nav" class="container scroll-margin">
                     <h3>Top Nav</h3>
                     <p>Top nav bars come with four different styles: <code class="n">.navbar-primary</code> <code class="n">.navbar-secondary</code> 
-                    <code class="n">.navbar-light</code> and <code class="n">.navbar-dark</code> which get applied directly to the <code class="n"><code class="n"><</code>nav></code> tag.</p>
+                    <code class="n">.navbar-light</code> and <code class="n">.navbar-dark</code> which get applied directly to the <code class="n"><code class="n"><</code>nav></code> tag.
+                    Add the classes as shown below to make a list of links in the nav bar. the <code class="n">.navbar-brand</code> is an optional addition that that takes the first position in the nav bar.
+                    The brand can be text, an icon, or an image.</p>
                     <section class="col-5 self-horizontal-align-center doc-demo-container">
                         <div class="doc-demo-display">
                             <nav class="navbar-primary doc-demo-nav">
@@ -313,6 +320,60 @@
 <span class="b"><<span class="b">/nav</span>></span></pre>
                     </section>
                 </section>
+
+
+                <section id="side-nav" class="container scroll-margin">
+                    <h3>Side Nav</h3>
+                    <p>The side nav will take up a fixed width on the right side of your screen. To create the side nav, you will have to nest the <code class="n">.side-nav</code> section 
+                    and the <code class="n">.body-section</code> section inside of a <code class="n">.body-side-nav</code> section. </p>
+                    <section class="col-5 self-horizontal-align-center doc-demo-container">
+                        <div class="row doc-demo-display">
+                            <section class="body-side-nav doc-demo-bg-tint doc-demo-body-side">
+                                <section class="side-nav doc-demo-side-nav">
+                                      <a class="row head-link"><h4>Page Title</h4></a>
+                                      <a class="row link"><h6>Section</h6></a>
+                                      <a class="row link"><h6>Section</h6></a>
+                                        <a class="row link nested">Sub-Section</a>
+                                        <a class="row link nested">Sub-Section</a>
+                                        <a class="row link nested">Sub-Section</a>
+                              </section>
+                            
+                              <section class="doc-demo-body-section">
+                              </section>
+                            </section> 
+                        </div>
+                        <pre class="doc-demo-code">
+<span class="b"><<span class="b">section</span> </span><span class="kw">class=</span><span class="n">"body-side-nav"</span><span class="b">></span>
+  <span class="b"><<span class="b">section</span> </span><span class="kw">class=</span><span class="n">"side-nav"</span><span class="b">></span>
+    <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"row head-link"</span><span class="b">></span>
+      <span class="b"><<span class="b">h4</span>></span>Page Title<span class="b"><<span class="b">/h4</span>></span>
+    <span class="b"><<span class="b">/a</span>></span>
+    <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"row link"</span><span class="b">></span>
+      <span class="b"><<span class="b">h6</span>></span>Section<span class="b"><<span class="b">/h6</span>></span>
+    <span class="b"><<span class="b">/a</span>></span>
+    <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"row link"</span><span class="b">></span>
+      <span class="b"><<span class="b">h6</span>></span>Section<span class="b"><<span class="b">/h6</span>></span>
+    <span class="b"><<span class="b">/a</span>></span>
+    <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"row link nested"</span><span class="b">></span>
+      Sub-Section
+    <span class="b"><<span class="b">/a</span>></span>
+    <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"row link nested"</span><span class="b">></span>
+      Sub-Section
+    <span class="b"><<span class="b">/a</span>></span>
+    <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"row link nested"</span><span class="b">></span>
+      Sub-Section
+    <span class="b"><<span class="b">/a</span>></span>
+  <span class="b"><<span class="b">/section</span>></span>
+
+
+  <span class="b"><<span class="b">section</span> </span><span class="kw">class=</span><span class="n">"body-section"</span><span class="b">></span>
+    ...
+  <span class="b"><<span class="b">/section</span>></span>
+
+<span class="b"><<span class="b">/section</span>></span></pre>
+                    </section>
+                </section>
+
 
                 <!-- End Nav -->
             </section>
