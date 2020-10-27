@@ -1,5 +1,5 @@
 @use 'mixins';
-
+@use 'colors';
 
 img {
     margin:0.5em;
@@ -23,4 +23,54 @@ input[type=text] {
     &:focus {
         border:2.5px solid #333;
     }
+}
+
+
+form {
+
+}
+
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border:1px solid #ddd;
+    border-left: 0;
+    border-right: 0;
+    text-align: left;
+    padding: 0.8em;
+}
+
+th {
+    font-weight: bold;
+}
+.table-dark.table-striped tr:nth-of-type(odd) {
+    background-color: lighten(colors.$dark-color, 6%)!important;
+}
+.table-light.table-striped tr:nth-of-type(odd) {
+    background-color: colors.$light-color!important;
+}
+
+.table-primary {
+    background-color: colors.$primary-color;
+    color:#fff;
+}
+
+.table-secondary {
+    background-color: colors.$secondary-color;
+    color:#000;
+}
+
+.table-light {
+    background-color: #fff;
+    color:#000;
+}
+
+.table-dark {
+    background-color: colors.$dark-color;
+    color:#fff;
 }

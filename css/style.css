@@ -528,6 +528,51 @@ input[type=text]:focus {
   border: 2.5px solid #333;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  text-align: left;
+  padding: 0.8em;
+}
+
+th {
+  font-weight: bold;
+}
+
+.table-dark.table-striped tr:nth-of-type(odd) {
+  background-color: #343434 !important;
+}
+
+.table-light.table-striped tr:nth-of-type(odd) {
+  background-color: #eee !important;
+}
+
+.table-primary {
+  background-color: #7530ff;
+  color: #fff;
+}
+
+.table-secondary {
+  background-color: #ffbd38;
+  color: #000;
+}
+
+.table-light {
+  background-color: #fff;
+  color: #000;
+}
+
+.table-dark {
+  background-color: #252525;
+  color: #fff;
+}
+
 html {
   scroll-behavior: smooth;
 }
