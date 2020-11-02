@@ -152,8 +152,34 @@ nav a {
 }
 
 
+//dropdown 
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    position: absolute;
+    top:100%;
+    left:0;
+    z-index:50;
+    width:auto;
+    display:none;
+    padding: 0.5em 0;
+    background-color: #fff;
+    border:1px solid #efefef;
+    border-radius: 7px;
+    color:#000;
 
-
+}
+.dropdown-item {
+    display:block;
+    width:auto;
+    padding:0.25em 1.5em;
+    white-space: nowrap;
+    @include mixins.transition(background-color 0.2s ease);
+    &:hover {
+        background-color: #f2f2f2;
+    }
+}
 
 
 //side-nav

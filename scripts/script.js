@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    //Create hamburger button
     if(document.getElementsByClassName("navbar-collapse").length > 0) {
         let button = document.createElement("button");
         button.id = "toggleTopNavBtn";
@@ -92,10 +93,28 @@ document.addEventListener("DOMContentLoaded", () => {
         let nav = document.getElementsByTagName("nav")[0];
         nav.insertBefore(button, nav.children[2]);
     }
+
+    //add arrow on drop down nav btns 
+    for(dropdownToggleBtn of document.getElementsByClassName("dropdown-toggle")) {
+        dropdownToggleBtn.innerHTML = dropdownToggleBtn.innerHTML + " &#9660"; 
+        dropdownToggleBtn.addEventListener("click", () => {toggleDropdownMenu(dropdownToggleBtn);});
+    }
+
 });
 
 
 
+const toggleDropdownMenu = btn => {
+    let parent = btn.parentNode;
+    let menu = parent.getElementsByClassName("dropdown-menu")[0];
+    console.log(menu);
+    if(menu.style.display == "block") {
+        menu.style.display = "none";
+    }
+    else {
+        menu.style.display = "block";
+    }
+}
 
 //Top Nav Bar
 

@@ -36,6 +36,7 @@
                 <a href="#vertical-alignment" class="row link nested">Vertical Alignment</a>
             <a href="#nav" class="row link"><h6>Navbar</h6></a>
                 <a href="#top-nav" class="row link nested">Top Nav</a>
+                <a href="#top-nav-dropdown" class="row link nested">Top Nav Dropdown</a>
                 <a href="#side-nav" class="row link nested">Side Nav</a>
             <a href="#header" class="row link"><h6>Header</h6></a>
             <a href="#footer" class="row link"><h6>Footer</h6></a>
@@ -222,7 +223,8 @@
                     <p>Top nav bars come with four different styles: <code class="n">.navbar-primary</code> <code class="n">.navbar-secondary</code> 
                     <code class="n">.navbar-light</code> and <code class="n">.navbar-dark</code> which get applied directly to the <code class="n"><code class="n"><</code>nav></code> tag.
                     Add the classes as shown below to make a list of links in the nav bar. the <code class="n">.navbar-brand</code> is an optional addition that that takes the first position in the nav bar.
-                    The brand can be text, an icon, or an image.</p>
+                    The brand can be text, an icon, or an image. <br>
+                    To make the nav bar collapse, add <code class="n">.navbar-collapse</code> to the div after the brand.</p>
                     <section class="col-5 self-horizontal-align-center doc-demo-container">
                         <div class="doc-demo-display">
                             <nav class="navbar-primary doc-demo-nav">
@@ -295,7 +297,7 @@
   <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"navbar-brand"</span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
     Brand
   <span class="b"><<span class="b">/a</span>></span>
-  <span class="b"><<span class="b">div</span>></span>
+  <span class="b"><<span class="b">div</span>></span><span class="kw"> //Try adding .navbar-collapse class to me</span>
     <span class="b"><<span class="b">ul</span> </span><span class="kw">class=</span><span class="n">"navbar-nav"</span><span class="b">></span>
       <span class="b"><<span class="b">li</span> </span><span class="kw">class=</span><span class="n">"nav-item"</span><span class="b">></span>
         <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"nav-link"</span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
@@ -328,6 +330,74 @@
                     </section>
                 </section>
 
+
+                <section id="top-nav-dropdown" class="container scroll-margin">
+                  <h3>Top Nav Dropdown</h3>
+                  <p>Create a <code class="n"><code class="n"><</code>div></code> with <code class="n"><code class="n"><</code>a></code> tag items inside the 
+                  <code class="n"><code class="n"><</code>li></code> of the dropdown button. Add the following classes in the example to create a dropdown menu.</p>
+                  <section class="col-5 self-horizontal-align-center doc-demo-container">
+                      <div class="doc-demo-display">
+                          <nav class="navbar-primary doc-demo-nav">
+                              <a class="navbar-brand" >Brand</a>
+                              <div class="">
+                                  <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                      <a class="nav-link">Tab 1</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link">Tab 2</a>
+                                  </li>
+                                    <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle">Tab 3</a>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item">Option 1</a>
+                                        <a class="dropdown-item">Option 2</a>
+                                        <a class="dropdown-item">Option 3</a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                              </div>
+                          </nav>
+                          
+                      </div>
+                      <pre class="doc-demo-code">
+<span class="b"><<span class="b">nav</span> </span><span class="kw">class=</span><span class="n">"navbar-primary"</span><span class="b">></span>
+<span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"navbar-brand"</span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
+  Brand
+<span class="b"><<span class="b">/a</span>></span>
+<span class="b"><<span class="b">div</span>></span>
+  <span class="b"><<span class="b">ul</span> </span><span class="kw">class=</span><span class="n">"navbar-nav"</span><span class="b">></span>
+    <span class="b"><<span class="b">li</span> </span><span class="kw">class=</span><span class="n">"nav-item"</span><span class="b">></span>
+      <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"nav-link"</span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
+        Tab 1
+      <span class="b"><<span class="b">/a</span>></span>
+    <span class="b"><<span class="b">/li</span>></span>
+    <span class="b"><<span class="b">li</span> </span><span class="kw">class=</span><span class="n">"nav-item"</span><span class="b">></span>
+      <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"nav-link"</span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
+        Tab 2
+      <span class="b"><<span class="b">/a</span>></span>
+    <span class="b"><<span class="b">/li</span>></span>
+    <span class="b"><<span class="b">li</span> </span><span class="kw">class=</span><span class="n">"nav-item dropdown"</span><span class="b">></span>
+      <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"nav-link dropdown-toggle"</span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
+        Tab 3
+      <span class="b"><<span class="b">/a</span>></span>
+      <span class="b"><<span class="b">div</span> </span><span class="kw">class=</span><span class="n">"dropdown-menu"</span>></span>
+        <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"dropdown-item"</span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
+          Option 1
+        <span class="b"><<span class="b">/a</span>></span>
+        <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"dropdown-item"</span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
+          Option 2
+        <span class="b"><<span class="b">/a</span>></span>
+        <span class="b"><<span class="b">a</span> </span><span class="kw">class=</span><span class="n">"dropdown-item"</span> <span class="kw">href=</span><span class="n">"#"</span><span class="b">></span>
+          Option 3
+        <span class="b"><<span class="b">/a</span>></span>
+      <span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">/li</span>></span>
+  <span class="b"><<span class="b">/ul</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/nav</span>></span></pre>
+                  </section>
+              </section>
 
                 <section id="side-nav" class="container scroll-margin">
                     <h3>Side Nav</h3>

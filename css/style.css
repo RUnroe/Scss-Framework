@@ -320,6 +320,38 @@ nav a {
     text-align: center;
   }
 }
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 50;
+  width: auto;
+  display: none;
+  padding: 0.5em 0;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 7px;
+  color: #000;
+}
+
+.dropdown-item {
+  display: block;
+  width: auto;
+  padding: 0.25em 1.5em;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+}
+.dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+
 .side-nav {
   background-color: #f2f0fa;
   height: 100%;
