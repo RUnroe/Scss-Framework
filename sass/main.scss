@@ -11,6 +11,7 @@ html {
 }
 .body-section {
     padding:1em 3em;
+    box-sizing: border-box;
     &.nav-fixed {
         margin-top: 3em;
     }
@@ -27,11 +28,5 @@ html {
 @media all and (max-width:650px) {
     .body-section {
         padding: 1em 0.5em;
-    }
-    .side-nav {
-        display:none;
-    }
-    .body-side-nav {
-        display:block;
     }
 }

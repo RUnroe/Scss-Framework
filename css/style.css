@@ -161,7 +161,6 @@ nav {
   top: 0;
   z-index: 10;
   width: 100%;
-  padding: 0 1em;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -173,7 +172,8 @@ nav.nav-fixed {
 
 .navbar-brand {
   font-size: 1.3em;
-  margin: 0 1em 0 0.5em;
+  padding: 0 1em;
+  height: 100%;
 }
 
 .navbar-nav {
@@ -257,13 +257,27 @@ nav a {
   background-color: #3c3c3c;
 }
 
+.navbar-collapse {
+  display: flex;
+  flex-direction: row;
+}
+
+#toggleTopNavBtn {
+  width: 3.2em;
+  height: 2.8em;
+}
+
+@media all and (max-width: 500px) {
+  .navbar-collapse {
+    flex-direction: column;
+  }
+}
 .side-nav {
   background-color: #f2f0fa;
   height: 100vh;
   width: 12em;
   position: fixed;
   z-index: 5;
-  padding: 0.5em;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -273,7 +287,7 @@ nav a {
 
 .body-side-nav {
   display: grid;
-  grid-template-columns: 12em auto;
+  grid-template-columns: 12em 1fr;
 }
 .body-side-nav .body-section, .body-side-nav header, .body-side-nav footer {
   grid-column: 2;
@@ -301,6 +315,40 @@ nav a {
   color: black !important;
 }
 
+.side-nav-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 2.4em;
+  line-height: 100%;
+  height: 100%;
+  padding: 0.1em 0.2em 0.2em 0.5em;
+}
+
+.close-nav-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background-color: #0001;
+  width: 100%;
+  height: 100%;
+}
+
+@media all and (max-width: 650px) {
+  .side-nav {
+    display: none;
+    max-width: 250px;
+    width: 100%;
+  }
+
+  .side-nav-toggle {
+    display: block;
+  }
+
+  .body-side-nav {
+    grid-template-columns: 0 1fr;
+  }
+}
 .row {
   display: flex;
   width: 100%;
@@ -626,6 +674,7 @@ html {
 
 .body-section {
   padding: 1em 3em;
+  box-sizing: border-box;
 }
 .body-section.nav-fixed {
   margin-top: 3em;
@@ -642,14 +691,6 @@ html {
 @media all and (max-width: 650px) {
   .body-section {
     padding: 1em 0.5em;
-  }
-
-  .side-nav {
-    display: none;
-  }
-
-  .body-side-nav {
-    display: block;
   }
 }
 
