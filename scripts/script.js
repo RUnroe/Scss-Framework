@@ -89,10 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         button.appendChild(container);
         button.addEventListener("click", toggleTopNav);
-        for(nav of document.getElementsByTagName("nav")) {
-            nav.insertBefore(button, nav.children[2]);
-        }
-        
+        let nav = document.getElementsByTagName("nav")[0];
+        nav.insertBefore(button, nav.children[2]);
     }
 });
 

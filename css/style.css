@@ -740,6 +740,10 @@ html {
   .body-section {
     padding: 1em 0.5em;
   }
+
+  .side-nav.nav-fixed {
+    padding-top: 0.5em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
