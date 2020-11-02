@@ -39,10 +39,18 @@ const resetSideNav = () => {
     }
 }
 
+//Window Resize
 window.onresize = () => {
     if(window.innerWidth > 650 && isSideNavOpen) closeSideNav();
     
     if(window.innerWidth > 650) resetSideNav();
+
+    if(window.innerWidth > 500) {
+        for(nav of document.getElementsByClassName("navbar-collapse")) {
+            nav.style.height = "";
+            navExpanded = false;
+        }
+    }
     
 }
 
@@ -65,10 +73,46 @@ document.addEventListener("DOMContentLoaded", () => {
         let button = document.createElement("button");
         button.id = "toggleTopNavBtn";
         button.classList.add("btn");
-        button.classList.add("btn-light");
+
+        let container = document.createElement("div");
+
+        let menuBar1 = document.createElement("div");
+        let menuBar2 = document.createElement("div");
+        let menuBar3 = document.createElement("div");
+        menuBar1.classList.add("menu-bar");
+        menuBar2.classList.add("menu-bar");
+        menuBar2.classList.add("mid");
+        menuBar3.classList.add("menu-bar");
+        container.appendChild(menuBar1);
+        container.appendChild(menuBar2);
+        container.appendChild(menuBar3);
+
+        button.appendChild(container);
+        button.addEventListener("click", toggleTopNav);
         for(nav of document.getElementsByTagName("nav")) {
             nav.insertBefore(button, nav.children[2]);
         }
         
     }
 });
+
+
+
+
+//Top Nav Bar
+
+let navExpanded = false;
+
+//toggles whether the mobile view nav bar is expanded or not
+const toggleTopNav = evt => {
+    for(nav of document.getElementsByClassName("navbar-collapse")) {
+        if(nav.style.height == "auto") {
+            nav.style.height = "0";
+            navExpanded = false;
+        }
+        else{
+            nav.style.height = "auto";
+            navExpanded = true;
+        }
+    }
+}

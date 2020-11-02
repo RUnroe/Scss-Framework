@@ -201,6 +201,9 @@ nav a {
   background-color: #7530ff;
   color: #fff;
 }
+.navbar-primary .navbar-collapse {
+  background-color: #7530ff;
+}
 
 .navbar-primary .nav-link {
   transition: background-color 0.2s ease;
@@ -215,6 +218,9 @@ nav a {
 .navbar-secondary {
   background-color: #ffbd38;
   color: #000;
+}
+.navbar-secondary .navbar-collapse {
+  background-color: #ffbd38;
 }
 
 .navbar-secondary .nav-link {
@@ -231,6 +237,9 @@ nav a {
   background-color: #eee;
   color: #000;
 }
+.navbar-light .navbar-collapse {
+  background-color: #eee;
+}
 
 .navbar-light .nav-link {
   transition: background-color 0.2s ease;
@@ -246,6 +255,9 @@ nav a {
   background-color: #252525;
   color: #fff;
 }
+.navbar-dark .navbar-collapse {
+  background-color: #252525;
+}
 
 .navbar-dark .nav-link {
   transition: background-color 0.2s ease;
@@ -258,23 +270,59 @@ nav a {
 }
 
 .navbar-collapse {
+  height: auto;
+  overflow: hidden;
+}
+.navbar-collapse ul {
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 
 #toggleTopNavBtn {
-  width: 3.2em;
-  height: 2.8em;
+  display: none;
+  width: 3.5em;
+  height: 3em;
+  padding: 0.5em 0.6em;
+  background-color: #f2f0fa;
+  right: 2px;
+  position: absolute;
+  z-index: 2;
+}
+
+.menu-bar {
+  width: 100%;
+  background-color: #333;
+  border-radius: 10%;
+  height: 2px;
+}
+.menu-bar.mid {
+  margin: 5px 0;
 }
 
 @media all and (max-width: 500px) {
+  #toggleTopNavBtn {
+    display: block;
+  }
+
   .navbar-collapse {
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    top: 3em;
+    height: 0;
+    transition: height 0.5s;
+    overflow: hidden;
+    z-index: 5;
+  }
+  .navbar-collapse ul {
     flex-direction: column;
+    text-align: center;
   }
 }
 .side-nav {
   background-color: #f2f0fa;
-  height: 100vh;
+  height: 100%;
   width: 12em;
   position: fixed;
   z-index: 5;
@@ -346,7 +394,7 @@ nav a {
   }
 
   .body-side-nav {
-    grid-template-columns: 0 1fr;
+    display: block;
   }
 }
 .row {

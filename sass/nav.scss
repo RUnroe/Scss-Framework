@@ -43,6 +43,10 @@ nav a {
 .navbar-primary {
     background-color: colors.$primary-color;
     color:#fff;
+    .navbar-collapse {
+        background-color: colors.$primary-color;
+    }
+
 }
 .navbar-primary .nav-link {
     @include mixins.transition(background-color 0.2s ease);
@@ -53,6 +57,9 @@ nav a {
 .navbar-secondary {
     background-color: colors.$secondary-color;
     color:#000;
+    .navbar-collapse {
+        background-color: colors.$secondary-color;
+    }
 }
 .navbar-secondary .nav-link {
     @include mixins.transition(background-color 0.2s ease);
@@ -63,6 +70,9 @@ nav a {
 .navbar-light {
     background-color: colors.$light-color;
     color:#000;
+    .navbar-collapse {
+        background-color: colors.$light-color;
+    }
 }
 .navbar-light .nav-link {
     @include mixins.transition(background-color 0.2s ease);
@@ -73,6 +83,9 @@ nav a {
 .navbar-dark {
     background-color: colors.$dark-color;
     color:#fff;
+    .navbar-collapse {
+        background-color: colors.$dark-color;
+    }
 }
 .navbar-dark .nav-link {
     @include mixins.transition(background-color 0.2s ease);
@@ -82,22 +95,59 @@ nav a {
 }
 
 .navbar-collapse {
-    display:flex;
-    flex-direction: row;
+    height: auto;
+    ul {
+        display:flex;
+        flex-direction: row;
+        overflow:hidden;
+
+    }
+    overflow:hidden;
 }
 
 #toggleTopNavBtn {
-    // display:none;
-    width:3.2em;
-    height:2.8em;
+    display:none;
+    width:3.5em;
+    height:3em;
+    padding:0.5em 0.6em;
+    background-color: colors.$code-bg-color;
+    right:2px;
+    position:absolute;
+    z-index: 2;
 }
+
+
+.menu-bar {
+    width:100%;
+    background-color: #333;
+    border-radius: 10%;
+    height:2px;
+    &.mid{
+        margin:5px 0;
+    }
+}
+
 
 @media all and (max-width:500px) {
 
-    .navbar-collapse {
-        flex-direction: column;
+    #toggleTopNavBtn {
+        display:block;
     }
     
+    .navbar-collapse {
+        flex-direction: row;
+        position: fixed;
+        width:100%;
+        top:3em;
+        height:0;
+        transition: height 0.5s;
+        overflow: hidden;
+        z-index: 5;
+        ul {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
 
 }
 
@@ -110,7 +160,7 @@ nav a {
 
 .side-nav{
     background-color: colors.$code-bg-color;
-    height:100vh;
+    height:100%;
     width:12em;
     position: fixed;
     z-index: 5;
@@ -195,6 +245,6 @@ nav a {
         display:block;
     }
     .body-side-nav {
-        grid-template-columns: 0 1fr;
+        display:block;
     }
 }
