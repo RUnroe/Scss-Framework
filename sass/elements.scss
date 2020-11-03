@@ -77,3 +77,72 @@ th {
     background-color: colors.$dark-color;
     color:#fff;
 }
+
+
+
+//Alerts
+
+.alert {
+    width:100%;
+    padding:1em;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+
+.alert-primary {
+    background-color: colors.$primary-color;
+    color:#fff;
+}
+.alert-secondary {
+    background-color: colors.$secondary-color;
+    color:#000;
+}
+.alert-success {
+    background-color: colors.$success-color;
+    color:#fff;
+}
+.alert-danger {
+    background-color: colors.$danger-color;
+    color:#fff;
+}
+.alert-light {
+    background-color: colors.$light-color;
+    color:#000;
+}
+.alert-dark {
+    background-color: colors.$dark-color;
+    color:#fff;
+    .close {
+        color:#fff;
+    }
+}
+.alert-closable {
+    position: relative;
+    @include mixins.transition(opacity 0.3s ease);
+}
+
+.close {
+    position: absolute;
+    top:0;
+    right:0;
+    float:right;
+    width:100%;
+    height:100%;
+    max-width:4em;
+    max-height:4em;
+    background-color: #0000;
+    font-size: 1.1em;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    border:none;
+    opacity:0.5;
+    @include mixins.transition(opacity 0.3s ease);
+    &:hover {
+        opacity:0.9;
+    }
+    &:focus, &:active {
+        outline:0;
+    }
+}

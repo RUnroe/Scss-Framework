@@ -32,6 +32,9 @@
           <a href="#containers" class="row link"><h6>Containers</h6></a>
           <a href="#input-fields" class="row link"><h6>Input Fields</h6></a>
           <a href="#images" class="row link"><h6>Images</h6></a>
+          <a href="#alert-section" class="row link"><h6>Alerts</h6></a>
+            <a href="#alerts" class="row link nested">Default Alert</a>
+            <a href="#closable-alert" class="row link nested">Closable Alert</a>
           <a href="#button-section" class="row link"><h6>Buttons</h6></a>
             <a href="#buttons" class="row link nested">Buttons</a>
             <a href="#button-group" class="row link nested">Button Group</a>
@@ -111,6 +114,81 @@
 
         </section>
       </section>
+
+
+      <section id="alert-section" class="container scroll-margin">
+        <h2>Alerts</h2>
+
+        <section id="alerts" class="container scroll-margin">
+          <h3>Default Alert</h3>
+          <p> An alert is a small highlighted block of text. It can be created by applying <code class="n">.alert</code> and a color type  
+          to a <code class="n"><code class="n"><</code>div></code>.</p>
+          <section class="col-5 self-horizontal-align-center doc-demo-container">
+          
+            <div class="doc-demo-display">
+              <div class="alert alert-primary">Primary Alert</div>
+              <div class="alert alert-secondary">Secondary Alert</div>
+              <div class="alert alert-success">Success Alert</div>
+              <div class="alert alert-danger">Danger Alert</div>
+              <div class="alert alert-light">Light Alert</div>
+              <div class="alert alert-dark">Dark Alert</div>
+
+            </div>
+        
+          <pre class="doc-demo-code">
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"alert alert-primary"</span><span class="b">></span>
+  Primary Alert
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"alert alert-secondary"</span><span class="b">></span>
+  Secondary Alert
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"alert alert-success"</span><span class="b">></span>
+  Success Alert
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"alert alert-danger"</span><span class="b">></span>
+  Danger Alert
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"alert alert-light"</span><span class="b">></span>
+  Light Alert
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"alert alert-dark"</span><span class="b">></span>
+  Dark Alert
+<span class="b"><<span class="b">/div</span>></span></pre>
+
+          </section>
+        </section>
+
+
+        <section id="closable-alert" class="container scroll-margin">
+          <h3>Closable Alert</h3>
+          <p> This alert works the same as the default but will allow the user to close it if they wish. In order to accomplish this, add
+            <code class="n">.alert-closable</code> to the <code class="n"><code class="n"><</code>div></code>.</p>
+          <section class="col-5 self-horizontal-align-center doc-demo-container">
+          
+            <div class="doc-demo-display">
+              <div class="alert alert-closable alert-primary">Primary Alert</div>
+              <div class="alert alert-closable alert-light">Light Alert</div>
+              <div class="alert alert-closable alert-dark">Dark Alert</div>
+
+            </div>
+        
+          <pre class="doc-demo-code">
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"alert alert-closable alert-primary"</span><span class="b">></span>
+  Primary Alert
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"alert alert-closable alert-light"</span><span class="b">></span>
+  Light Alert
+<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"alert alert-closable alert-dark"</span><span class="b">></span>
+  Dark Alert
+<span class="b"><<span class="b">/div</span>></span></pre>
+
+          </section>
+        </section>
+
+<!-- End Alert Section -->
+      </section>
+      
 
 
 

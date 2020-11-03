@@ -748,6 +748,82 @@ th {
   color: #fff;
 }
 
+.alert {
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.alert-primary {
+  background-color: #7530ff;
+  color: #fff;
+}
+
+.alert-secondary {
+  background-color: #ffbd38;
+  color: #000;
+}
+
+.alert-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.alert-danger {
+  background-color: #DA344D;
+  color: #fff;
+}
+
+.alert-light {
+  background-color: #eee;
+  color: #000;
+}
+
+.alert-dark {
+  background-color: #252525;
+  color: #fff;
+}
+.alert-dark .close {
+  color: #fff;
+}
+
+.alert-closable {
+  position: relative;
+  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  float: right;
+  width: 100%;
+  height: 100%;
+  max-width: 4em;
+  max-height: 4em;
+  background-color: #0000;
+  font-size: 1.1em;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+}
+.close:hover {
+  opacity: 0.9;
+}
+.close:focus, .close:active {
+  outline: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }

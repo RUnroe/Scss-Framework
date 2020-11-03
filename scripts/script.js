@@ -100,9 +100,23 @@ document.addEventListener("DOMContentLoaded", () => {
         dropdownToggleBtn.addEventListener("click", () => {toggleDropdownMenu(dropdownToggleBtn);});
     }
 
+    //add close btn to closable alerts
+    for(alert of document.getElementsByClassName("alert-closable")) {
+        let closeBtn = document.createElement("button");
+        closeBtn.classList.add("close");
+        closeBtn.innerHTML = "&#10006;";
+        closeBtn.addEventListener("click", (event) => {closeAlert(event.target.parentNode)});
+        alert.appendChild(closeBtn);
+    }
+
 });
 
 
+const closeAlert = alert => {
+    alert.style.opacity = "0";
+    setTimeout(() => {alert.style.display = "none";}, 300);
+    
+}
 
 const toggleDropdownMenu = btn => {
     let parent = btn.parentNode;
