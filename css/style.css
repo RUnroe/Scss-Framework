@@ -447,6 +447,10 @@ nav a {
   justify-content: flex-end !important;
 }
 
+.content-space-between {
+  justify-content: space-between !important;
+}
+
 .content-vertical-align-top {
   align-items: flex-start !important;
 }
@@ -878,6 +882,80 @@ th {
   cursor: pointer;
 }
 
+.tooltip.right .tooltip-text::after, .tooltip.left .tooltip-text::after, .tooltip.bottom .tooltip-text::after, .tooltip.top .tooltip-text::after {
+  content: " ";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+}
+.tooltip .tooltip-text {
+  opacity: 0;
+  background-color: #252525;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.3em 0.8em;
+  position: absolute;
+  z-index: 50;
+  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+}
+.tooltip:hover .tooltip-text {
+  opacity: 1;
+}
+.tooltip.top .tooltip-text {
+  transform: translate(-50%, 0);
+  bottom: 130%;
+  left: 50%;
+}
+.tooltip.top .tooltip-text::after {
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-color: #252525 transparent transparent transparent;
+}
+.tooltip.bottom .tooltip-text {
+  transform: translate(-50%, 0);
+  top: 130%;
+  left: 50%;
+}
+.tooltip.bottom .tooltip-text::after {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-color: transparent transparent #252525 transparent;
+}
+.tooltip.left .tooltip-text {
+  top: -30%;
+  right: 110%;
+}
+.tooltip.left .tooltip-text::after {
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-color: transparent transparent transparent #252525;
+}
+.tooltip.right .tooltip-text {
+  top: -30%;
+  left: 110%;
+}
+.tooltip.right .tooltip-text::after {
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-color: transparent #252525 transparent transparent;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -885,6 +963,7 @@ html {
 .body-section {
   padding: 1em 3em;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .body-section.nav-fixed {
   margin-top: 3em;

@@ -33,6 +33,7 @@
           <a href="#input-fields" class="row link"><h6>Input Fields</h6></a>
           <a href="#images" class="row link"><h6>Images</h6></a>
           <a href="#modals" class="row link"><h6>Modals</h6></a>
+          <a href="#tooltips" class="row link"><h6>Tooltips</h6></a>
           <a href="#alert-section" class="row link"><h6>Alerts</h6></a>
             <a href="#alerts" class="row link nested">Default Alert</a>
             <a href="#closable-alert" class="row link nested">Closable Alert</a>
@@ -116,7 +117,6 @@
         </section>
       </section>
 
-
       <section id="modals" class="container scroll-margin">
         <h3>Modals</h3>
         <p>Create a modal by applying the <code class="n">.modal</code> class to a <code class="n"><<code class="n">div></code></code> tag.
@@ -199,6 +199,70 @@
 <span class="b"><<span class="b">/div</span>></span></pre>
         </section>
       </section>
+
+
+
+      <section id="tooltips" class="container scroll-margin">
+        <h3>Tooltips</h3>
+        <p>By default, <code class="n"><<code class="n">img></code></code> tags will take up the max width of their parent and scale with their parent.</p>
+        <section class="col-5 self-horizontal-align-center doc-demo-container">
+        
+          <div class="doc-demo-display content-horizontal-align-center">
+            <div class="row content-space-between">
+            <div class="tooltip top">
+              Tooltip top
+              <span class="tooltip-text">Tooltip Message</span>
+            </div>
+            <div class="tooltip bottom self-horizontal-align-right">
+              Tooltip bottom
+              <span class="tooltip-text">Tooltip Message</span>
+            </div>
+          </div>
+          <div class="row content-space-between">
+            <div class="tooltip right">
+              Tooltip right
+              <span class="tooltip-text">Tooltip Message</span>
+            </div>
+            <div class="tooltip left">
+              Tooltip left
+              <span class="tooltip-text">Tooltip Message</span>
+            </div>
+          </div>
+          </div>
+      
+        <pre class="doc-demo-code">
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"tooltip top"</span><span class="b">></span>
+  Tooltip top
+  <span class="b"><<span class="b">span</span></span> <span class="kw">class=</span><span class="n">"tooltip-text"</span><span class="b">></span>
+    Tooltip Message
+  <span class="b"><<span class="b">/span</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"tooltip bottom"</span><span class="b">></span>
+  Tooltip bottom
+  <span class="b"><<span class="b">span</span></span> <span class="kw">class=</span><span class="n">"tooltip-text"</span><span class="b">></span>
+    Tooltip Message
+  <span class="b"><<span class="b">/span</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"tooltip right"</span><span class="b">></span>
+  Tooltip right
+  <span class="b"><<span class="b">span</span></span> <span class="kw">class=</span><span class="n">"tooltip-text"</span><span class="b">></span>
+    Tooltip Message
+  <span class="b"><<span class="b">/span</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"tooltip left"</span><span class="b">></span>
+  Tooltip left
+  <span class="b"><<span class="b">span</span></span> <span class="kw">class=</span><span class="n">"tooltip-text"</span><span class="b">></span>
+    Tooltip Message
+  <span class="b"><<span class="b">/span</span>></span>
+<span class="b"><<span class="b">/div</span>></span></pre>
+        </section>
+      </section>
+
+
+
 
       <section id="alert-section" class="container scroll-margin">
         <h2>Alerts</h2>

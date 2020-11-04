@@ -12,6 +12,7 @@ html {
 .body-section {
     padding:1em 3em;
     box-sizing: border-box;
+    overflow: hidden;
     &.nav-fixed {
         margin-top: 3em;
     }
