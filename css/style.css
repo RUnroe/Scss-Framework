@@ -839,15 +839,32 @@ th {
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
-  padding: 2em;
   border: 1px solid #888;
   width: 80%;
+  position: relative;
+}
+
+.modal-body {
+  padding: 2em;
+}
+
+.modal-header {
+  padding: 1em 2em;
+}
+.modal-header.dark {
+  background-color: #252525;
+  color: #fff;
+}
+.modal-header.dark .modal-close {
+  color: #fff;
 }
 
 .modal-close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
   color: #000;
-  opacity: 0.3;
-  float: right;
+  opacity: 0.4;
   font-size: 1.1em;
   font-weight: bold;
   transition: opacity 0.3s ease;

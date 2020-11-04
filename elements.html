@@ -119,26 +119,84 @@
 
       <section id="modals" class="container scroll-margin">
         <h3>Modals</h3>
-        <p>By default, <code class="n"><<code class="n">img></code></code> tags will take up the max width of their parent and scale with their parent.</p>
+        <p>Create a modal by applying the <code class="n">.modal</code> class to a <code class="n"><<code class="n">div></code></code> tag.
+        Create a button and give it a <code class="n">data-target</code> attribute set to the id of the modal to link them. Modals are easily
+        customizable and there can be more than one per page.</p>
         <section class="col-5 self-horizontal-align-center doc-demo-container">
         
           <div class="doc-demo-display content-horizontal-align-center row">
-            <button class="btn btn-dark" data-toggle="modal" data-target="basicModal">Open Modal</button>
+            
+            <button class="btn btn-light" data-toggle="modal" data-target="basicModal">Open Basic Modal</button>
 
             <div id="basicModal" class="modal">
               <div class="modal-content">
-                <span class="modal-close">&#10006;</span>
-                <p>Modal Text Goes Here</p>
+                <div class="modal-header">
+                  <h1>Modal Header</h1>
+                  <span class="modal-close">&#10006;</span>
+                </div>
+                <div class="modal-body">
+                  <p>Modal Text Goes Here</p>
+                </div>
               </div>
-            
             </div>
+
+            <button class="btn btn-dark" data-toggle="modal" data-target="darkModal">Open Dark Modal</button>
+
+            <div id="darkModal" class="modal">
+              <div class="modal-content">
+                <div class="modal-header dark">
+                  <h1>Dark Modal Header</h1>
+                  <span class="modal-close">&#10006;</span>
+                </div>
+                <div class="modal-body">
+                  <p>Put anything you want to say in the modal right here</p>
+                </div>
+              </div>
+            </div>
+
+
           </div>
       
         <pre class="doc-demo-code">
-<span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">"https://via.placeholder.com/150"</span><span class="b"> /></span>
-<span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">"https://via.placeholder.com/150"</span><span class="b"> /></span>
-<span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">"https://via.placeholder.com/150"</span><span class="b"> /></span>
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-light"</span> <span class="kw">data-toggle=</span><span class="n">"modal"</span> <span class="kw">data-target=</span><span class="n">"basicModal"</span><span class="b">></span>
+  Open Basic Modal
+<span class="b"><<span class="b">/button</span>></span> 
 
+<span class="b"><<span class="b">div</span></span> <span class="kw">id=</span><span class="n">"basicModal"</span> <span class="kw">class=</span><span class="n">"modal"</span><span class="b">></span>
+  <span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"modal-content"</span><span class="b">></span>
+    <span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"modal-header"</span><span class="b">></span>
+      <span class="b"><<span class="b">h1</span></span><span class="b">></span>
+        Modal Header
+      <span class="b"><<span class="b">/h1</span>></span>
+      <span class="b"><<span class="b">span</span></span> <span class="kw">class=</span><span class="n">"modal-close"</span><span class="b">></span><span>&</span>#10006;<span class="b"><<span class="b">/span</span>></span>
+    <span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"modal-body"</span><span class="b">></span>
+      <span class="b"><<span class="b">p</span></span><span class="b">></span>
+        Modal Text Goes Here
+      <span class="b"><<span class="b">/p</span>></span>
+    <span class="b"><<span class="b">/div</span>></span> 
+  <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+
+<span class="b"><<span class="b">button</span></span> <span class="kw">class=</span><span class="n">"btn btn-dark"</span> <span class="kw">data-toggle=</span><span class="n">"modal"</span> <span class="kw">data-target=</span><span class="n">"darkModal"</span><span class="b">></span>
+  Open Dark Modal
+<span class="b"><<span class="b">/button</span>></span> 
+
+<span class="b"><<span class="b">div</span></span> <span class="kw">id=</span><span class="n">"darkModal"</span> <span class="kw">class=</span><span class="n">"modal"</span><span class="b">></span>
+  <span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"modal-content"</span><span class="b">></span>
+    <span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"modal-header dark"</span><span class="b">></span>
+      <span class="b"><<span class="b">h1</span></span><span class="b">></span>
+        Dark Modal Header
+      <span class="b"><<span class="b">/h1</span>></span>
+      <span class="b"><<span class="b">span</span></span> <span class="kw">class=</span><span class="n">"modal-close"</span><span class="b">></span><span>&</span>#10006;<span class="b"><<span class="b">/span</span>></span>
+    <span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"modal-body"</span><span class="b">></span>
+      <span class="b"><<span class="b">p</span></span><span class="b">></span>
+        Put anything you want to say in the modal right here
+      <span class="b"><<span class="b">/p</span>></span>
+    <span class="b"><<span class="b">/div</span>></span> 
+  <span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span></pre>
         </section>
       </section>
 

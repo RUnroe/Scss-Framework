@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //add close event listener to modal
     for(modalCloseBtn of document.getElementsByClassName("modal-close")) {
-        modalCloseBtn.addEventListener("click", event => {closeModal(event.target.parentNode.parentNode)});
+        modalCloseBtn.addEventListener("click", event => {closeModal(event.target.closest(".modal"))});
     }
 
     //add open modal event listener to correct buttons
