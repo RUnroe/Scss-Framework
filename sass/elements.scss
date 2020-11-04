@@ -146,3 +146,41 @@ th {
         outline:0;
     }
 }
+
+
+
+//Modals
+
+.modal {
+    display:none;
+    position:fixed;
+    z-index:75;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background-color: #0003;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding:2em;
+    border:1px solid #888;
+    width:80%;
+}
+
+.modal-close {
+  color: #000;
+  opacity: 0.3;
+  float: right;
+  font-size: 1.1em;
+  font-weight: bold;
+  @include mixins.transition(opacity 0.3s ease);
+  &:hover, &:focus {
+  opacity: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+}

@@ -105,13 +105,28 @@ document.addEventListener("DOMContentLoaded", () => {
         let closeBtn = document.createElement("button");
         closeBtn.classList.add("close");
         closeBtn.innerHTML = "&#10006;";
-        closeBtn.addEventListener("click", (event) => {closeAlert(event.target.parentNode)});
+        closeBtn.addEventListener("click", event => {closeAlert(event.target.parentNode)});
         alert.appendChild(closeBtn);
+    }
+
+    //add close event listener to modal
+    for(modalCloseBtn of document.getElementsByClassName("modal-close")) {
+        modalCloseBtn.addEventListener("click", event => {closeModal(event.target.parentNode.parentNode)});
+    }
+
+    //add open modal event listener to correct buttons
+    for(btn of document.querySelectorAll('[data-toggle="modal"]')) {
+        btn.addEventListener("click", event => {showModal(document.getElementById(event.target.dataset.target));});
     }
 
 });
 
-
+const showModal = modal => {
+    modal.style.display = "block";
+}
+const closeModal = modal => {
+    modal.style.display = "none";
+}
 const closeAlert = alert => {
     alert.style.opacity = "0";
     setTimeout(() => {alert.style.display = "none";}, 300);
