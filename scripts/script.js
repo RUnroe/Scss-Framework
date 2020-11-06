@@ -119,6 +119,17 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener("click", event => {showModal(document.getElementById(event.target.dataset.target));});
     }
 
+    //Image slide show interval
+    setInterval(nextImageSlideshow, 3500);
+
+    //Set event listeners for slide show buttons
+    for(slideshow of document.getElementsByClassName("slideshow")) {
+        if(slideshow.getElementsByClassName("slideshow-navbtn").length) {
+            slideshow.getElementsByClassName("left")[0].addEventListener("click", event => {slideshowBackward(event.target.closest(".slideshow"));});
+            slideshow.getElementsByClassName("right")[0].addEventListener("click", event => {slideshowFoward(event.target.closest(".slideshow"));});
+
+        }
+    }
 });
 
 const showModal = modal => {
@@ -161,4 +172,90 @@ const toggleTopNav = evt => {
             navExpanded = true;
         }
     }
+}
+
+
+//Slideshow
+
+const nextImageSlideshow = () => {
+    for(slideshow of document.getElementsByClassName("slideshow")) {
+        slideshowFoward(slideshow);
+    }
+}
+
+const slideshowFoward = slideshow => {
+    let slideshowIndicators = slideshow.getElementsByClassName("slideshow-indicators")[0];
+    let slideshowInner = slideshow.getElementsByClassName("slideshow-inner")[0];
+    let currentSlideIndex = slideshowIndicators.getElementsByClassName("active")[0].dataset.slide;
+    let numOfSlides = slideshowIndicators.children.length;
+
+    let newSlide = (currentSlideIndex + 1) % numOfSlides;
+
+    let nextSlide = (newSlide + 1) % numOfSlides;
+
+    slideshowIndicators.children[newSlide].classList.add("active");
+    
+    slideshowInner.children[newSlide].classList.add("active");
+    slideshowInner.children[currentSlideIndex].classList.add("previous");
+    slideshowInner.children[newSlide].classList.add("previous");
+    setTimeout(() => {
+        slideshowIndicators.children[currentSlideIndex].classList.remove("active");
+        
+        slideshowInner.children[currentSlideIndex].style.transitionDuration = "0s";
+        slideshowInner.children[newSlide].style.transitionDuration = "0s";
+
+        slideshowInner.children[currentSlideIndex].classList.remove("previous");
+        slideshowInner.children[newSlide].classList.remove("previous");
+        
+
+        slideshowInner.children[currentSlideIndex].classList.remove("active");   
+        slideshowInner.children[newSlide].classList.add("active");
+
+        slideshowInner.children[newSlide].classList.remove("next");
+        slideshowInner.children[nextSlide].classList.add("next");
+
+        setTimeout(()=> {
+            slideshowInner.children[currentSlideIndex].style.transitionDuration = "";
+            slideshowInner.children[newSlide].style.transitionDuration = "";
+        }, 50);
+    },800);
+}
+
+const slideshowBackward = slideshow => {
+  
+    let slideshowIndicators = slideshow.getElementsByClassName("slideshow-indicators")[0];
+    let slideshowInner = slideshow.getElementsByClassName("slideshow-inner")[0];
+    let currentSlideIndex = slideshowIndicators.getElementsByClassName("active")[0].dataset.slide;
+    let numOfSlides = slideshowIndicators.children.length;
+
+    let newSlide = (currentSlideIndex - 1) < 0 ? numOfSlides-1 : currentSlideIndex - 1;
+
+    let nextSlide = (newSlide - 1) < 0 ? newSlide-1 : newSlide - 1;
+
+    slideshowIndicators.children[newSlide].classList.add("active");
+    
+    slideshowInner.children[newSlide].classList.add("active");
+    slideshowInner.children[currentSlideIndex].classList.add("previous");
+    slideshowInner.children[newSlide].classList.add("previous");
+    setTimeout(() => {
+        slideshowIndicators.children[currentSlideIndex].classList.remove("active");
+        
+        slideshowInner.children[currentSlideIndex].style.transitionDuration = "0s";
+        slideshowInner.children[newSlide].style.transitionDuration = "0s";
+
+        slideshowInner.children[currentSlideIndex].classList.remove("previous");
+        slideshowInner.children[newSlide].classList.remove("previous");
+        
+
+        slideshowInner.children[currentSlideIndex].classList.remove("active");   
+        slideshowInner.children[newSlide].classList.add("active");
+
+        slideshowInner.children[newSlide].classList.remove("next");
+        slideshowInner.children[nextSlide].classList.add("next");
+
+        setTimeout(()=> {
+            slideshowInner.children[currentSlideIndex].style.transitionDuration = "";
+            slideshowInner.children[newSlide].style.transitionDuration = "";
+        }, 50);
+    },800);
 }

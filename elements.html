@@ -31,9 +31,11 @@
         <a href="#" class="row head-link"><h4>Elements</h4></a>
           <a href="#containers" class="row link"><h6>Containers</h6></a>
           <a href="#input-fields" class="row link"><h6>Input Fields</h6></a>
-          <a href="#images" class="row link"><h6>Images</h6></a>
           <a href="#modals" class="row link"><h6>Modals</h6></a>
           <a href="#tooltips" class="row link"><h6>Tooltips</h6></a>
+          <a href="#image-section" class="row link"><h6>Image</h6></a>
+            <a href="#images" class="row link nested">Default Image</a>
+            <a href="#slideshow" class="row link nested">Slideshow</a>
           <a href="#alert-section" class="row link"><h6>Alerts</h6></a>
             <a href="#alerts" class="row link nested">Default Alert</a>
             <a href="#closable-alert" class="row link nested">Closable Alert</a>
@@ -98,24 +100,7 @@
       </section>
 
 
-      <section id="images" class="container scroll-margin">
-        <h3>Images</h3>
-        <p>By default, <code class="n"><<code class="n">img></code></code> tags will take up the max width of their parent and scale with their parent.</p>
-        <section class="col-5 self-horizontal-align-center doc-demo-container">
-        
-          <div class="doc-demo-display content-horizontal-align-center row">
-            <img src="https://via.placeholder.com/150" />
-            <img src="https://via.placeholder.com/150" />
-            <img src="https://via.placeholder.com/150" />
-          </div>
       
-        <pre class="doc-demo-code">
-<span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">"https://via.placeholder.com/150"</span><span class="b"> /></span>
-<span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">"https://via.placeholder.com/150"</span><span class="b"> /></span>
-<span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">"https://via.placeholder.com/150"</span><span class="b"> /></span>
-
-        </section>
-      </section>
 
       <section id="modals" class="container scroll-margin">
         <h3>Modals</h3>
@@ -262,6 +247,89 @@
         </section>
       </section>
 
+
+      <section id="image-section" class="container scroll-margin">
+        <h2>Image</h2>
+
+        <section id="images" class="container scroll-margin">
+          <h3>Default Image</h3>
+          <p>By default, <code class="n"><<code class="n">img></code></code> tags will take up the max width of their parent and scale with their parent.</p>
+          <section class="col-5 self-horizontal-align-center doc-demo-container">
+          
+            <div class="doc-demo-display content-horizontal-align-center row">
+              <img src="https://via.placeholder.com/150" />
+              <img src="https://via.placeholder.com/150" />
+              <img src="https://via.placeholder.com/150" />
+            </div>
+        
+          <pre class="doc-demo-code">
+<span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">"https://via.placeholder.com/150"</span><span class="b"> /></span>
+<span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">"https://via.placeholder.com/150"</span><span class="b"> /></span>
+<span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">"https://via.placeholder.com/150"</span><span class="b"> /></span>
+
+          </section>
+        </section>
+
+        <section id="slideshow" class="container scroll-margin">
+          <h3>Slideshow</h3>
+          <p>An image slideshow with navigation buttons and dot indicators. Follow the example below to create one for yourself!</p>
+          <section class="col-5 self-horizontal-align-center doc-demo-container">
+          
+            <div class="doc-demo-display content-horizontal-align-center row">
+
+              <div class="slideshow">
+                <div class="slideshow-indicators">
+                  <div class="active" data-slide="0"></div>
+                  <div data-slide="1"></div>
+                  <div data-slide="2"></div>
+                </div>
+
+                <div class="slideshow-inner">
+                  <div class="slideshow-item active">
+                    <img src="https://via.placeholder.com/800x400?text=Slide+0" />
+                  </div>
+                  <div class="slideshow-item next">
+                    <img src="https://via.placeholder.com/800x400?text=Slide+1" />
+                  </div>
+                  <div class="slideshow-item">
+                    <img src="https://via.placeholder.com/800x400?text=Slide+2" />
+                  </div>
+                </div>
+
+                <div class="slideshow-navbtn left">&#8249;</div>
+                <div class="slideshow-navbtn right">&#8250;</div>               
+              </div>
+
+            </div>
+        
+          <pre class="doc-demo-code">
+<span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"slideshow"</span><span class="b">></span>
+  <span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"slideshow-indicators"</span><span class="b">></span>
+    <span class="b"><<span class="b">div</span></span> <span class="kw">data-slide=</span><span class="n">"0"</span> <span class="kw">class=</span><span class="n">"active"</span><span class="b">></span><span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">div</span></span> <span class="kw">data-slide=</span><span class="n">"1"</span><span class="b">></span><span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">div</span></span> <span class="kw">data-slide=</span><span class="n">"2"</span><span class="b">></span><span class="b"><<span class="b">/div</span>></span>
+  <span class="b"><<span class="b">/div</span>></span>
+  <span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"slideshow-inner"</span><span class="b">></span>
+    <span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"slideshow-item active"</span><span class="b">></span>
+      <span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">""</span><span class="b"> /></span>
+    <span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"slideshow-item next"</span><span class="b">></span>
+      <span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">""</span><span class="b"> /></span>
+    <span class="b"><<span class="b">/div</span>></span>
+    <span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"slideshow-item"</span><span class="b">></span>
+      <span class="b"><<span class="b">img</span></span> <span class="kw">src=</span><span class="n">""</span><span class="b"> /></span>
+    <span class="b"><<span class="b">/div</span>></span>
+  <span class="b"><<span class="b">/div</span>></span>
+  <span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"slideshow-navbtn left"</span><span class="b">></span><span>&</span>#8249;<span class="b"><<span class="b">/div</span>></span>
+  <span class="b"><<span class="b">div</span></span> <span class="kw">class=</span><span class="n">"slideshow-navbtn right"</span><span class="b">></span><span>&</span>#8250;<span class="b"><<span class="b">/div</span>></span>
+<span class="b"><<span class="b">/div</span>></span>
+
+</pre>
+          </section>
+        </section>
+
+        <!-- End Images Section -->
+      </section>
 
 
 
