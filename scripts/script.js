@@ -130,7 +130,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
     }
+    fetch("quotes.json").then(response => {
+        return JSON.parse(response);
+    }).then(response => {
+        console.log(response);
+    });
+    loadQuotesJSON(setQuotes);
+    
 });
+
+
+const loadQuotesJSON = callback => {   
+
+    let xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+    xobj.open('GET', 'quotes.json', true); 
+    xobj.onreadystatechange = function () {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+              console.log(xobj.responseText);
+            callback(JSON.parse(xobj.responseText));
+          }
+    };
+    xobj.send(null);  
+}
+
+const setQuotes = quotes => {
+    quote = quotes.quotes[Math.floor(Math.random() * quotes.quotes.length)];
+    for(qotd of document.getElementsByClassName("quote-of-the-day")) {
+        qotd.innerHTML = quote;
+    }
+}
 
 const showModal = modal => {
     modal.style.display = "block";
@@ -182,7 +211,7 @@ const nextImageSlideshow = () => {
         slideshowFoward(slideshow);
     }
 }
-
+//Move slideshow foward
 const slideshowFoward = slideshow => {
     let slideshowIndicators = slideshow.getElementsByClassName("slideshow-indicators")[0];
     let slideshowInner = slideshow.getElementsByClassName("slideshow-inner")[0];
@@ -198,8 +227,8 @@ const slideshowFoward = slideshow => {
     slideshowInner.children[newSlide].classList.add("active");
     slideshowInner.children[currentSlideIndex].classList.add("previous");
     slideshowInner.children[newSlide].classList.add("previous");
+    slideshowIndicators.children[currentSlideIndex].classList.remove("active");
     setTimeout(() => {
-        slideshowIndicators.children[currentSlideIndex].classList.remove("active");
         
         slideshowInner.children[currentSlideIndex].style.transitionDuration = "0s";
         slideshowInner.children[newSlide].style.transitionDuration = "0s";
@@ -221,6 +250,8 @@ const slideshowFoward = slideshow => {
     },800);
 }
 
+
+//Move slideshow backward
 const slideshowBackward = slideshow => {
   
     let slideshowIndicators = slideshow.getElementsByClassName("slideshow-indicators")[0];
@@ -230,32 +261,26 @@ const slideshowBackward = slideshow => {
 
     let newSlide = (currentSlideIndex - 1) < 0 ? numOfSlides-1 : currentSlideIndex - 1;
 
-    let nextSlide = (newSlide - 1) < 0 ? newSlide-1 : newSlide - 1;
+    let nextSlide = currentSlideIndex;
 
     slideshowIndicators.children[newSlide].classList.add("active");
     
     slideshowInner.children[newSlide].classList.add("active");
-    slideshowInner.children[currentSlideIndex].classList.add("previous");
-    slideshowInner.children[newSlide].classList.add("previous");
-    setTimeout(() => {
-        slideshowIndicators.children[currentSlideIndex].classList.remove("active");
-        
-        slideshowInner.children[currentSlideIndex].style.transitionDuration = "0s";
-        slideshowInner.children[newSlide].style.transitionDuration = "0s";
+    
+    slideshowIndicators.children[currentSlideIndex].classList.remove("active");
+    
+    slideshowInner.children[currentSlideIndex].style.transitionDuration = "0s";
+    slideshowInner.children[newSlide].style.transitionDuration = "0s";
 
-        slideshowInner.children[currentSlideIndex].classList.remove("previous");
-        slideshowInner.children[newSlide].classList.remove("previous");
-        
+    
+    slideshowInner.children[currentSlideIndex].classList.remove("active");   
+    slideshowInner.children[newSlide].classList.add("active");
 
-        slideshowInner.children[currentSlideIndex].classList.remove("active");   
-        slideshowInner.children[newSlide].classList.add("active");
+    slideshowInner.children[newSlide].classList.remove("next");
+    slideshowInner.children[nextSlide].classList.add("next");
 
-        slideshowInner.children[newSlide].classList.remove("next");
-        slideshowInner.children[nextSlide].classList.add("next");
-
-        setTimeout(()=> {
-            slideshowInner.children[currentSlideIndex].style.transitionDuration = "";
-            slideshowInner.children[newSlide].style.transitionDuration = "";
-        }, 50);
-    },800);
+    setTimeout(()=> {
+        slideshowInner.children[currentSlideIndex].style.transitionDuration = "";
+        slideshowInner.children[newSlide].style.transitionDuration = "";
+    }, 50);
 }
